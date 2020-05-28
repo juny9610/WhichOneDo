@@ -68,6 +68,15 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             break
         }
     }
+    
+    func mapView(_ mapView: MTMapView!, touchedCalloutBalloonRightSideOf poiItem: MTMapPOIItem!) {
+        /*
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController")
+        vcName?.modalTransitionStyle = .coverVertical
+        self.present(vcName!, animated: true, completion: nil)
+        */
+    }
+    
     /*
     // MARK: - Navigation
 
