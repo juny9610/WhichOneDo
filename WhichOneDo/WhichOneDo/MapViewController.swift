@@ -20,6 +20,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         super.viewDidLoad()
 
         //create MapView
+
         mapView = MTMapView(frame: self.view.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
