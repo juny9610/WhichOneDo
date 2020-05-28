@@ -14,9 +14,29 @@
                     <view key="view" contentMode="scaleToFill" id="WAP-qa-VAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-rm-UAD">
+                                <rect key="frame" x="144.5" y="144" width="125" height="32"/>
+                                <segments>
+                                    <segment title="전체"/>
+                                    <segment title="쓴맛"/>
+                                    <segment title="신맛"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filtering:" destination="Fto-fz-0rB" eventType="valueChanged" id="772-7F-6fI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mlZ-rm-UAD" firstAttribute="centerX" secondItem="WAP-qa-VAE" secondAttribute="centerX" id="FPe-Uq-Ens"/>
+                            <constraint firstItem="mlZ-rm-UAD" firstAttribute="top" secondItem="dNA-OO-FMO" secondAttribute="top" constant="100" id="liD-PU-NLf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dNA-OO-FMO"/>
                     </view>
+                    <connections>
+                        <outlet property="filter" destination="mlZ-rm-UAD" id="0xj-kV-Qoi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOT-md-eKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
