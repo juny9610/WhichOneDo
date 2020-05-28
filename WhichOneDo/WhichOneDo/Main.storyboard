@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aqk-Gt-F1N">
+
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,9 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="WAP-qa-VAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-rm-UAD">
+                                <rect key="frame" x="144.5" y="144" width="125" height="32"/>
+                                <segments>
+                                    <segment title="전체"/>
+                                    <segment title="쓴맛"/>
+                                    <segment title="신맛"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filtering:" destination="Fto-fz-0rB" eventType="valueChanged" id="772-7F-6fI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mlZ-rm-UAD" firstAttribute="centerX" secondItem="WAP-qa-VAE" secondAttribute="centerX" id="FPe-Uq-Ens"/>
+                            <constraint firstItem="mlZ-rm-UAD" firstAttribute="top" secondItem="dNA-OO-FMO" secondAttribute="top" constant="100" id="liD-PU-NLf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dNA-OO-FMO"/>
                     </view>
+                    <connections>
+                        <outlet property="filter" destination="mlZ-rm-UAD" id="0xj-kV-Qoi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOT-md-eKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +118,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-jH-WEx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-jH-WEx">
                                 <rect key="frame" x="142" y="231" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Ai9-2R-Yt4"/>
@@ -229,7 +250,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="QWj-HR-jBa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="QWj-HR-jBa">
                                 <rect key="frame" x="157" y="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Ldj-c7-1nX"/>
@@ -297,6 +318,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="아이콘" width="318" height="336"/>
+        <image name="아이콘" width="318" height="336"/>
     </resources>
 </document>
