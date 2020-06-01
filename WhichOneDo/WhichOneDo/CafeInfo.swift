@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CafeInfo{
+class CafeInfo{
     var id: Int
     var name: String
     var taste: String

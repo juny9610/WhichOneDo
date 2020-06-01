@@ -45,10 +45,11 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeBusinessHours: UILabel!
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
-    
+    var name: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        cafeName.text = name
+        /*
         cafeImage.image = UIImage(named: cafes[0].cafeImage)
         cafeName.text = cafes[0].cafeName
         coffeeBeanHome.text = cafes[0].coffeeBeanHome
@@ -57,8 +58,11 @@ class DetailCafeInfoViewController: UIViewController {
         cafeBusinessHours.text = cafes[0].cafeBusinessHours
         cafeAddress.text = cafes[0].cafeAddress
         cafePhone.text = cafes[0].cafePhone
+        */
     }
-    
+    func get(_ name1:String){
+        name = name1
+    }
     /*
     func showData (forRowAt indexPath: IndexPath) {
         
