@@ -44,6 +44,12 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeBusinessHours: UILabel!
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
+
+    var name: String!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        cafeName.text = name
+        /*
     
     var cafeArray:[CafeModel] = []
     override func viewDidLoad() {
@@ -58,7 +64,12 @@ class DetailCafeInfoViewController: UIViewController {
         cafeBusinessHours.text = cafes[0].cafeBusinessHours
         cafeAddress.text = cafes[0].cafeAddress
         cafePhone.text = cafes[0].cafePhone
+        */
     }
+    func get(_ name1:String){
+        name = name1
+    }
+
     func getCafeDetail(){
         Database.database().reference().child("cafes").observe(DataEventType.value, with: {
             (datasnapshot) in

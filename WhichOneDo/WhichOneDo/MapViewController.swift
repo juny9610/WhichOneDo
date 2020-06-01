@@ -71,11 +71,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
     
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonRightSideOf poiItem: MTMapPOIItem!) {
-        /*
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController")
+        
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "DetailCafeInfoViewController") as? DetailCafeInfoViewController
+        vcName?.get(poiItem.itemName)
         vcName?.modalTransitionStyle = .coverVertical
         self.present(vcName!, animated: true, completion: nil)
-        */
+        
     }
     
     /*
