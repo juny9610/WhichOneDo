@@ -1,0 +1,53 @@
+{
+    "users" : {
+        "9y37hRAg0bTTVcYdc0xvO4OEL792" : {
+          "userId" : "9y37hRAg0bTTVcYdc0xvO4OEL792",
+          "userName" : "인상분"
+        },
+        "CSTvJYcWNmSaT27egpud1p7RC3J3" : {
+          "userId" : "CSTvJYcWNmSaT27egpud1p7RC3J3",
+          "userName" : "최홍규"
+        },
+        "EVCao04GqHSu9EMTU5CNnRHbptl1" : {
+          "userId" : "EVCao04GqHSu9EMTU5CNnRHbptl1",
+          "userName" : "kang"
+        },
+        "GTribQmItrN6M7qJ21oCHcWgSy33" : {
+          "userId" : "GTribQmItrN6M7qJ21oCHcWgSy33",
+          "userName" : "Lang"
+        },
+        "H40dtpEvTrXQVwzcUggPmWkAEH93" : {
+          "userId" : "H40dtpEvTrXQVwzcUggPmWkAEH93",
+          "userName" : "김대한"
+        }
+    },
+    "cafes":{
+        "0":{
+            "cafeName": "스타벅스 한양대점",
+            "taste": "쓴맛",
+            "coffeeBeanHome": "케냐",
+            "coordinate": "127.039525,37.5613438",
+            "number" : "02-1522-3232",
+            "location": "서울특별시 성동구 왕십리로 225",
+            "americanoPrice": 4100
+        },
+        "1":{
+            "cafeName": "아리가또",
+            "taste": "신맛",
+            "coffeeBeanHome": "과테말라",
+            "coordinate": "127.039208,37.5610015",
+            "number": null,
+            "location": "서울특별시 성동구 마조로1길 39",
+            "americanoPrice": 3800
+        },
+        "2":{
+            "cafeName": "아리가또 2호점",
+            "taste": "신맛",
+            "coffeeBeanHome": "과테말라",
+            "coordinate": "127.039525,37.5613438",
+            "number": null,
+            "location": "서울특별시 성동구 마조로9길 18",
+            "americanoPrice": 3800
+        }
+    }
+}
