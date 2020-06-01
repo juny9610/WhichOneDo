@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 struct Cafe{
     var cafeImage : String
     var cafeName : String
@@ -28,7 +28,6 @@ var cafes : [Cafe] = [
 ]
 
 class DetailCafeInfoViewController: UIViewController {
-    
     //txt outlet
     @IBOutlet var txtCoffeeBeanHome: UILabel!
     @IBOutlet var txtCoffeeFlavor: UILabel!
@@ -46,9 +45,11 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
     
+    var cafeArray:[CafeModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getCafeDetail()
+        print(cafeArray)
         cafeImage.image = UIImage(named: cafes[0].cafeImage)
         cafeName.text = cafes[0].cafeName
         coffeeBeanHome.text = cafes[0].coffeeBeanHome
@@ -58,7 +59,18 @@ class DetailCafeInfoViewController: UIViewController {
         cafeAddress.text = cafes[0].cafeAddress
         cafePhone.text = cafes[0].cafePhone
     }
-    
+    func getCafeDetail(){
+        Database.database().reference().child("cafes").observe(DataEventType.value, with: {
+            (datasnapshot) in
+            self.cafeArray.removeAll()
+            for child in datasnapshot.children{
+                let fchild = child as! DataSnapshot
+                let cafeModel = CafeModel()
+                cafeModel.setValuesForKeys(fchild.value as! [String:Any])
+                self.cafeArray.append(cafeModel)
+            }
+        })
+    }
     /*
     func showData (forRowAt indexPath: IndexPath) {
         
