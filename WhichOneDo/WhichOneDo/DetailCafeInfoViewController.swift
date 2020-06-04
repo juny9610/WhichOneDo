@@ -46,12 +46,13 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafePhone: UILabel!
 
     var name: String!
+    var cafeArray:[CafeModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        cafeName.text = name
+        getCafeDetail(name)
+        print("cafeArray: ", cafeArray)
         /*
     
-    var cafeArray:[CafeModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail()
@@ -70,7 +71,7 @@ class DetailCafeInfoViewController: UIViewController {
         name = name1
     }
 
-    func getCafeDetail(){
+    func getCafeDetail(_ name1: String){
         Database.database().reference().child("cafes").observe(DataEventType.value, with: {
             (datasnapshot) in
             self.cafeArray.removeAll()
@@ -78,13 +79,22 @@ class DetailCafeInfoViewController: UIViewController {
                 let fchild = child as! DataSnapshot
                 let cafeModel = CafeModel()
                 cafeModel.setValuesForKeys(fchild.value as! [String:Any])
-                self.cafeArray.append(cafeModel)
+                if cafeModel.cafeName == name1{
+                    self.cafeArray.append(cafeModel)
+                    self.cafeName.text = name1
+                    self.americanoPrice.text = self.cafeArray[0].americanoPrice
+                    self.cafeAddress.text = self.cafeArray[0].location
+                    self.cafePhone.text = self.cafeArray[0].number
+                    self.cafeBusinessHours.text = self.cafeArray[0].cafeBusinessHours
+                    self.coffeeFlavor.text = self.cafeArray[0].taste
+                    self.coffeeBeanHome.text = self.cafeArray[0].coffeeBeanHome
+                    break
+                }
             }
         })
     }
     /*
     func showData (forRowAt indexPath: IndexPath) {
-        
         //cafeImage.text = "이미지가 없습니다."
         //cafeImage.text = cafes[indexPath.row].cafeImage
         cafeName.text = cafes[indexPath.row].cafeName
@@ -94,10 +104,8 @@ class DetailCafeInfoViewController: UIViewController {
         cafeBusinessHours.text = cafes[indexPath.row].cafeBusinessHours
         cafeAddress.text = cafes[indexPath.row].cafeAddress
         cafePhone.text = cafes[indexPath.row].cafePhone
-        
     }
     */
-
     /*
     // MARK: - Navigation
 

@@ -9,12 +9,12 @@
 import UIKit
 
 class CafeModel: NSObject {
-    @objc var cafeUid: String?
+    @objc var americanoPrice: String?
+    @objc var cafeBusinessHours: String?
     @objc var cafeName: String?
-    @objc var taste: String?
     @objc var coffeeBeanHome: String?
     @objc var coordinate: String?
-    @objc var number: String?
     @objc var location: String?
-    var americanoPrice: Int?
+    @objc var number: String?
+    @objc var taste: String?
 }
