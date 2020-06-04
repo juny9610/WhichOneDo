@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var btnSignUp: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        try! Auth.auth().signOut()
+//        try! Auth.auth().signOut()
         // Do any additional setup after loading the view.
         btnSignUp.addTarget(self, action: #selector(SignUpEvent), for: .touchUpInside)
         btnLogin.addTarget(self, action: #selector(LoginEvent), for: .touchUpInside)
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         Auth.auth().addStateDidChangeListener{
             (auth, user) in
             if user != nil{
-                let view = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
+                let view = self.storyboard?.instantiateViewController(identifier: "MainTabBarController") as! UITabBarController
                 view.modalPresentationStyle = .fullScreen
                 self.present(view, animated: true, completion: nil)
             }
