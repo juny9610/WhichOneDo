@@ -16,11 +16,20 @@ class LoginViewController: UIViewController {
     @IBOutlet var btnSignUp: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        try! Auth.auth().signOut()
         // Do any additional setup after loading the view.
         btnSignUp.addTarget(self, action: #selector(SignUpEvent), for: .touchUpInside)
         btnLogin.addTarget(self, action: #selector(LoginEvent), for: .touchUpInside)
         btnSignUp.backgroundColor = UIColor(hex: "503C27")
         btnLogin.backgroundColor = UIColor(hex: "503C27")
+        Auth.auth().addStateDidChangeListener{
+            (auth, user) in
+            if user != nil{
+                let view = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
+                view.modalPresentationStyle = .fullScreen
+                self.present(view, animated: true, completion: nil)
+            }
+        }
     }
     
     @objc func SignUpEvent(){
@@ -29,9 +38,13 @@ class LoginViewController: UIViewController {
         self.present(view, animated: true, completion: nil)
     }
     @objc func LoginEvent(){
-        let view = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
-        view.modalPresentationStyle = .fullScreen
-        self.present(view, animated: true, completion: nil)
+        Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!, completion: { (user, err) in
+            if err != nil{
+                let alert = UIAlertController(title: "경고", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
     
 }

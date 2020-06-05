@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07FAFCBD3A7D248B09E83252 /* Pods_WhichOneDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E116082D1898B0C8C35C345 /* Pods_WhichOneDo.framework */; };
+		14263280247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426327F247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift */; };
+		14263282247FB9C400FCF7E3 /* DetailCafeInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14263281247FB9C400FCF7E3 /* DetailCafeInfo.storyboard */; };
+		1431B7032484FCA600F29232 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1431B7022484FCA600F29232 /* Favorite.storyboard */; };
+		1431B7052484FCBC00F29232 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B7042484FCBC00F29232 /* FavoriteTableViewController.swift */; };
+		1431B7082484FE5D00F29232 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B7062484FE5D00F29232 /* FavoriteTableViewCell.swift */; };
+		1431B7092484FE5D00F29232 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431B7072484FE5D00F29232 /* FavoriteTableViewCell.xib */; };
+		259234CE2484E15A000F03A6 /* CafeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259234CD2484E15A000F03A6 /* CafeModel.swift */; };
 		25A4906B247FC00100254FCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4906A247FC00100254FCB /* LoginViewController.swift */; };
 		25A49071247FC14000254FCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A49070247FC14000254FCB /* GoogleService-Info.plist */; };
 		25A49073247FC1E900254FCB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A49072247FC1E900254FCB /* SignupViewController.swift */; };
-		14263280247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426327F247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift */; };
-		14263282247FB9C400FCF7E3 /* DetailCafeInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14263281247FB9C400FCF7E3 /* DetailCafeInfo.storyboard */; };
 		25F06ABF2476A3BF005FDD33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F06ABE2476A3BF005FDD33 /* AppDelegate.swift */; };
 		25F06AC12476A3BF005FDD33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F06AC02476A3BF005FDD33 /* SceneDelegate.swift */; };
 		25F06AC92476A3BF005FDD33 /* WhichOneDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25F06AC72476A3BF005FDD33 /* WhichOneDo.xcdatamodeld */; };
 		25F06ACB2476A3C1005FDD33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F06ACA2476A3C1005FDD33 /* Assets.xcassets */; };
 		25F06ACE2476A3C1005FDD33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F06ACC2476A3C1005FDD33 /* LaunchScreen.storyboard */; };
-		6E4AA07A247FA78E00789257 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA079247FA78E00789257 /* OpenGLES.framework */; };
-		6E4AA07C247FA79B00789257 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA07B247FA79B00789257 /* SystemConfiguration.framework */; };
-		6E4AA07E247FA7A600789257 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA07D247FA7A600789257 /* CoreLocation.framework */; };
-		6E4AA080247FA7B400789257 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA07F247FA7B300789257 /* QuartzCore.framework */; };
 		6E4AA084247FA7D500789257 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA083247FA7D100789257 /* libsqlite3.tbd */; };
 		6E4AA085247FA7D900789257 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA082247FA7C800789257 /* libxml2.tbd */; };
 		6E4AA086247FA7DB00789257 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA081247FA7BD00789257 /* libc++.tbd */; };
@@ -53,17 +53,27 @@
 		6E4AA0CA247FA9EC00789257 /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4AA0AE247FA9EC00789257 /* map_present_background_update.png */; };
 		6E4AA0CB247FA9EC00789257 /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4AA0AF247FA9EC00789257 /* daum_th_line.png */; };
 		6E4AA0CC247FA9EC00789257 /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4AA0B0247FA9EC00789257 /* map_pin_shadow.png */; };
-		6E4AA0CD247FA9EC00789257 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA0B1247FA9EC00789257 /* DaumMap.framework */; };
 		6E4AA0CF247FAC0800789257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4AA0CE247FAC0800789257 /* Main.storyboard */; };
 		6E4AA0D3247FB9AB00789257 /* CafeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4AA0D2247FB9AB00789257 /* CafeInfo.swift */; };
+		6E4AA0D62487D8C600789257 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA07D247FA7A600789257 /* CoreLocation.framework */; };
+		6E4AA0D92487D8C800789257 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA0B1247FA9EC00789257 /* DaumMap.framework */; };
+		6E4AA0DB2487D8C900789257 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA079247FA78E00789257 /* OpenGLES.framework */; };
+		6E4AA0DD2487D8CB00789257 /* Pods_WhichOneDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E116082D1898B0C8C35C345 /* Pods_WhichOneDo.framework */; };
+		6E4AA0DF2487D8CC00789257 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA07F247FA7B300789257 /* QuartzCore.framework */; };
+		6E4AA0E12487D8CE00789257 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4AA07B247FA79B00789257 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1426327F247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCafeInfoViewController.swift; sourceTree = "<group>"; };
+		14263281247FB9C400FCF7E3 /* DetailCafeInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailCafeInfo.storyboard; sourceTree = "<group>"; };
+		1431B7022484FCA600F29232 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		1431B7042484FCBC00F29232 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		1431B7062484FE5D00F29232 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		1431B7072484FE5D00F29232 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		259234CD2484E15A000F03A6 /* CafeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeModel.swift; sourceTree = "<group>"; };
 		25A4906A247FC00100254FCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A49070247FC14000254FCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25A49072247FC1E900254FCB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		1426327F247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCafeInfoViewController.swift; sourceTree = "<group>"; };
-		14263281247FB9C400FCF7E3 /* DetailCafeInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailCafeInfo.storyboard; sourceTree = "<group>"; };
 		25F06ABB2476A3BF005FDD33 /* WhichOneDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhichOneDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F06ABE2476A3BF005FDD33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25F06AC02476A3BF005FDD33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,21 +138,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4AA07E247FA7A600789257 /* CoreLocation.framework in Frameworks */,
 				6E4AA084247FA7D500789257 /* libsqlite3.tbd in Frameworks */,
-				6E4AA080247FA7B400789257 /* QuartzCore.framework in Frameworks */,
-				07FAFCBD3A7D248B09E83252 /* Pods_WhichOneDo.framework in Frameworks */,
+				6E4AA0E12487D8CE00789257 /* SystemConfiguration.framework in Frameworks */,
+				6E4AA0DD2487D8CB00789257 /* Pods_WhichOneDo.framework in Frameworks */,
+				6E4AA0D62487D8C600789257 /* CoreLocation.framework in Frameworks */,
 				6E4AA085247FA7D900789257 /* libxml2.tbd in Frameworks */,
 				6E4AA086247FA7DB00789257 /* libc++.tbd in Frameworks */,
-				6E4AA07C247FA79B00789257 /* SystemConfiguration.framework in Frameworks */,
-				6E4AA0CD247FA9EC00789257 /* DaumMap.framework in Frameworks */,
-				6E4AA07A247FA78E00789257 /* OpenGLES.framework in Frameworks */,
+				6E4AA0D92487D8C800789257 /* DaumMap.framework in Frameworks */,
+				6E4AA0DB2487D8C900789257 /* OpenGLES.framework in Frameworks */,
+				6E4AA0DF2487D8CC00789257 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		259234CF2484E161000F03A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				259234CD2484E15A000F03A6 /* CafeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		25F06AB22476A3BF005FDD33 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +183,11 @@
 		25F06ABD2476A3BF005FDD33 /* WhichOneDo */ = {
 			isa = PBXGroup;
 			children = (
+				259234CF2484E161000F03A6 /* Model */,
+				1431B7022484FCA600F29232 /* Favorite.storyboard */,
+				1431B7042484FCBC00F29232 /* FavoriteTableViewController.swift */,
+				1431B7062484FE5D00F29232 /* FavoriteTableViewCell.swift */,
+				1431B7072484FE5D00F29232 /* FavoriteTableViewCell.xib */,
 				14263281247FB9C400FCF7E3 /* DetailCafeInfo.storyboard */,
 				1426327F247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift */,
 				25F06ABE2476A3BF005FDD33 /* AppDelegate.swift */,
@@ -353,8 +376,10 @@
 				6E4AA0C7247FA9EC00789257 /* map_pin.png in Resources */,
 				6E4AA0B8247FA9EC00789257 /* map_pinup@3x.png in Resources */,
 				6E4AA0B9247FA9EC00789257 /* map_pin_shadow@3x.png in Resources */,
+				1431B7032484FCA600F29232 /* Favorite.storyboard in Resources */,
 				6E4AA0B7247FA9EC00789257 /* map_pin_custom@3x.png in Resources */,
 				6E4AA0B2247FA9EC00789257 /* map_pinup_custom@3x.png in Resources */,
+				1431B7092484FE5D00F29232 /* FavoriteTableViewCell.xib in Resources */,
 				6E4AA0B3247FA9EC00789257 /* map_pin_custom.png in Resources */,
 				6E4AA0C5247FA9EC00789257 /* noimage256.png in Resources */,
 				6E4AA0CF247FAC0800789257 /* Main.storyboard in Resources */,
@@ -412,14 +437,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A4906B247FC00100254FCB /* LoginViewController.swift in Sources */,
+				259234CE2484E15A000F03A6 /* CafeModel.swift in Sources */,
 				25A49073247FC1E900254FCB /* SignupViewController.swift in Sources */,
-				25F06AC32476A3BF005FDD33 /* ViewController.swift in Sources */,
+				1431B7052484FCBC00F29232 /* FavoriteTableViewController.swift in Sources */,
 				25F06ABF2476A3BF005FDD33 /* AppDelegate.swift in Sources */,
 				6E4AA0D3247FB9AB00789257 /* CafeInfo.swift in Sources */,
 				25F06AC12476A3BF005FDD33 /* SceneDelegate.swift in Sources */,
 				6E4AA08A247FA80A00789257 /* MapViewController.swift in Sources */,
 				14263280247FB9A600FCF7E3 /* DetailCafeInfoViewController.swift in Sources */,
 				25F06AC92476A3BF005FDD33 /* WhichOneDo.xcdatamodeld in Sources */,
+				1431B7082484FE5D00F29232 /* FavoriteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -541,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -558,6 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CKW8PU9VVA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
@@ -581,6 +609,7 @@
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
 				);
 				INFOPLIST_FILE = WhichOneDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,6 +629,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CKW8PU9VVA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
@@ -623,6 +653,7 @@
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
 				);
 				INFOPLIST_FILE = WhichOneDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
