@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="40" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jxk-A5-bry">
-                                <rect key="frame" x="8" y="64" width="382" height="778"/>
+                                <rect key="frame" x="8" y="64" width="455.5" height="778"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-KK-At6">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="447.5" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-rZ-08k">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -30,7 +30,7 @@
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="abZ-yb-Mgn">
-                                                <rect key="frame" x="207" y="38" width="167" height="24"/>
+                                                <rect key="frame" x="207" y="38" width="93.5" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="cafeName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-GB-eU3">
                                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="24"/>
@@ -40,15 +40,28 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2W-kT-f59">
+                                                <rect key="frame" x="407.5" y="30" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="71d-CL-zYX"/>
+                                                    <constraint firstAttribute="width" constant="40" id="HFu-pl-RI2"/>
+                                                </constraints>
+                                                <state key="normal" image="unFavorite"/>
+                                                <state key="selected" image="Favorite"/>
+                                                <connections>
+                                                    <action selector="favoriteTapped:" destination="Qtx-u4-Yft" eventType="touchUpInside" id="gaG-Vy-7q2"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="nBf-rZ-08k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rbV-KK-At6" secondAttribute="leading" constant="10" id="L5d-CU-S52"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="abZ-yb-Mgn" secondAttribute="trailing" constant="10" id="RwC-rF-tIw"/>
-                                            <constraint firstItem="abZ-yb-Mgn" firstAttribute="leading" secondItem="nBf-rZ-08k" secondAttribute="trailing" constant="38" id="v0g-pC-Dp8"/>
+                                            <constraint firstItem="A2W-kT-f59" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="abZ-yb-Mgn" secondAttribute="trailing" constant="8" id="Qh8-zm-lB8"/>
+                                            <constraint firstAttribute="trailing" secondItem="A2W-kT-f59" secondAttribute="trailing" constant="10" id="U06-EF-fDH"/>
+                                            <constraint firstItem="abZ-yb-Mgn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nBf-rZ-08k" secondAttribute="trailing" constant="38" id="v0g-pC-Dp8"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Wt4-kB-8MF">
-                                        <rect key="frame" x="0.0" y="172" width="374" height="49"/>
+                                        <rect key="frame" x="0.0" y="172" width="447.5" height="49"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dvo-9P-gDa">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="49"/>
@@ -71,16 +84,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="85n-yX-OiI">
-                                                <rect key="frame" x="230" y="0.0" width="144" height="49"/>
+                                                <rect key="frame" x="230" y="0.0" width="217.5" height="49"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISY-7P-O5g">
-                                                        <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="217.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coffeeFlavor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ad-wk-JBm">
-                                                        <rect key="frame" x="0.0" y="28.5" width="144" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="217.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -98,16 +111,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oNW-a2-pyK">
-                                        <rect key="frame" x="0.0" y="293" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="293" width="447.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="아메리카노 가격    :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q4-H4-ph6">
-                                                <rect key="frame" x="0.0" y="0.0" width="247" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="americanoPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpe-zy-WHI">
-                                                <rect key="frame" x="255" y="0.0" width="119" height="20.5"/>
+                                                <rect key="frame" x="328.5" y="0.0" width="119" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -119,7 +132,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PpV-5C-Pj1">
-                                        <rect key="frame" x="0.0" y="385" width="374" height="208"/>
+                                        <rect key="frame" x="0.0" y="385" width="447.5" height="208"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영업 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-wd-c8Q">
                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="20"/>
@@ -151,16 +164,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="166" translatesAutoresizingMaskIntoConstraints="NO" id="4hF-yf-dGa">
-                                        <rect key="frame" x="0.0" y="665" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="665" width="447.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="주소 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2td-WC-1dP">
-                                                <rect key="frame" x="0.0" y="0.0" width="112.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cafeAddress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0j-5i-nce">
-                                                <rect key="frame" x="278.5" y="0.0" width="95.5" height="20.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="95.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -172,16 +185,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="146" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-nM-bhY">
-                                        <rect key="frame" x="0.0" y="757.5" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="757.5" width="447.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="전화번호 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3C-Or-3KM">
-                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cafePhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11s-1K-J6t">
-                                                <rect key="frame" x="292.5" y="0.0" width="81.5" height="20.5"/>
+                                                <rect key="frame" x="366" y="0.0" width="81.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -247,4 +260,8 @@
             <point key="canvasLocation" x="-365.21739130434787" y="-139.28571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Favorite" width="256" height="256"/>
+        <image name="unFavorite" width="256" height="256"/>
+    </resources>
 </document>

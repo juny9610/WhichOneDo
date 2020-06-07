@@ -45,13 +45,13 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
 
+    var cafeArray:[CafeModel] = []
     var name: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         cafeName.text = name
         /*
     
-    var cafeArray:[CafeModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail()
@@ -81,6 +81,14 @@ class DetailCafeInfoViewController: UIViewController {
                 self.cafeArray.append(cafeModel)
             }
         })
+    }
+    
+    @IBAction func favoriteTapped(_ sender: UIButton){
+        if sender.isSelected {
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
+        }
     }
     /*
     func showData (forRowAt indexPath: IndexPath) {
