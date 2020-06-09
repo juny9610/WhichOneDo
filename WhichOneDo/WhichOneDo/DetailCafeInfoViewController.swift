@@ -45,13 +45,14 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
 
+    var cafeArray:[CafeModel] = []
     var name: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         cafeName.text = name
         /*
     
-    var cafeArray:[CafeModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail()

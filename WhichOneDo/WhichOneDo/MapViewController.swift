@@ -14,18 +14,19 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var poiItems: [MTMapPOIItem]!
     var bitters: [MTMapPOIItem] = []
     var sourness:  [MTMapPOIItem] = []
+    var gpsImage: UIImage!
+    @IBOutlet var gpsButton: UIButton!
     @IBOutlet var filter: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //create MapView
-
         mapView = MTMapView(frame: self.view.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
-        //mapView.showCurrentLocationMarker = true
-        //mapView.currentLocationTrackingMode = .onWithHeading
+        mapView.showCurrentLocationMarker = true
+        mapView.currentLocationTrackingMode = .onWithHeading
 
         //create POIItem
         poiItems = cafeInfo.map({ (cafe: CafeInfo) -> MTMapPOIItem in
@@ -51,6 +52,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         self.view.addSubview(mapView)
         self.view.addSubview(filter)
+        self.view.addSubview(gpsButton)
     }
     
     @IBAction func filtering(_ sender: Any) {
@@ -78,7 +80,9 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         self.present(vcName!, animated: true, completion: nil)
         
     }
-    
+    @IBAction func gpsButtonTouched(_ sender: Any) {
+        mapView.currentLocationTrackingMode = .onWithHeading
+    }
     /*
     // MARK: - Navigation
 
