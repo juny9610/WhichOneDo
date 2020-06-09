@@ -51,8 +51,6 @@ class DetailCafeInfoViewController: UIViewController {
         super.viewDidLoad()
         cafeName.text = name
         /*
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail()
@@ -82,6 +80,14 @@ class DetailCafeInfoViewController: UIViewController {
                 self.cafeArray.append(cafeModel)
             }
         })
+    }
+    
+    @IBAction func favoriteTapped(_ sender: UIButton){
+        if sender.isSelected {
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
+        }
     }
     /*
     func showData (forRowAt indexPath: IndexPath) {
