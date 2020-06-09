@@ -26,28 +26,322 @@
             "cafeName": "스타벅스 한양대점",
             "taste": "쓴맛",
             "coffeeBeanHome": "케냐",
-            "coordinate": "127.039525,37.5613438",
+            "coordinate": [127.039525,37.5613438],
             "number" : "02-1522-3232",
             "location": "서울특별시 성동구 왕십리로 225",
-            "americanoPrice": 4100
+            "americanoPrice": "4100",
+            "cafeBusinessHours": "매일 08:00 - 24:00"
         },
         "1":{
             "cafeName": "아리가또",
             "taste": "신맛",
             "coffeeBeanHome": "과테말라",
-            "coordinate": "127.039208,37.5610015",
-            "number": null,
+            "coordinate": [127.039208,37.5610015],
+            "number": "없음",
             "location": "서울특별시 성동구 마조로1길 39",
-            "americanoPrice": 3800
+            "americanoPrice": "3800",
+            "cafeBusinessHours": "매일 11:00 - 23:00"
         },
         "2":{
             "cafeName": "아리가또 2호점",
             "taste": "신맛",
             "coffeeBeanHome": "과테말라",
-            "coordinate": "127.039525,37.5613438",
-            "number": null,
+            "coordinate": [127.039525,37.5613438],
+            "number": "없음",
             "location": "서울특별시 성동구 마조로9길 18",
-            "americanoPrice": 3800
+            "americanoPrice": "3800",
+            "cafeBusinessHours": "매일 11:00 - 23:00"
+        },
+        "3":{
+            "cafeName": "띠앋",
+            "taste": "신맛",
+            "coffeeBeanHome": "코스타리카",
+            "coordinate": [127.040531,37.5594514],
+            "number": "010-8429-9308",
+            "location": "서울특별시 성동구 마조로 17 1층 제2호",
+            "americanoPrice": "2500",
+            "cafeBusinessHours": "매일 10:00 - 22:00"
+        },
+        "4":{
+            "cafeName": "할리스커피 한양대시티빌점",
+            "taste": "쓴맛",
+            "coffeeBeanHome": "브라질",
+            "coordinate": [127.039898,37.5604787],
+            "number": "02-2299-9934",
+            "location": "서울특별시 성동구 마조로1가길 9",
+            "americanoPrice": "4300",
+            "cafeBusinessHours": "매일 08:00 - 24:00"
+        },
+        "5":{
+            "cafeName": "카페흥신소",
+            "taste": "쓴맛",
+            "coffeeBeanHome": "브라질",
+            "coordinate": [127.041605,37.5573066],
+            "number": "0507-1342-2143",
+            "location": "서울특별시 성동구 왕십리로 231 1층",
+            "americanoPrice": "4500",
+            "cafeBusinessHours": "매일 11:00 - 02:00"
+        },
+        "6":{
+            "cafeName": "스타벅스 엔터식스 한양대점",
+            "taste": "쓴맛",
+            "coffeeBeanHome": "케냐",
+            "coordinate": [127.040032,37.5571810],
+            "number": "02-1522-3232",
+            "location": "서울특별시 성동구 왕십리로 241",
+            "americanoPrice": "4100",
+            "cafeBusinessHours": "매일 08:00 - 22:00"
+        },
+        "7":{
+            "cafeName": "커피빈 왕십리민지역사점",
+            "taste": "신맛",
+            "coffeeBeanHome": "인도네시아",
+            "coordinate": [127.038416,37.5610558],
+            "number": "02-2200-6120",
+            "location": "서울특별시 성동구 왕십리광장로 17",
+            "americanoPrice": "4800",
+            "cafeBusinessHours": "매일 09:00 - 22:30"
+        },
+        "8":{
+            "cafeName": "갈십리",
+            "taste": "신맛",
+            "coffeeBeanHome": "코스타리카",
+            "coordinate": [127.040429,37.5589198],
+            "number": "0507-1384-3939",
+            "location": "서울특별시 성동구 마조로 15-11 갈십리",
+            "americanoPrice": "4000",
+            "cafeBusinessHours": "매일 11:00 - 23:00"
+        },
+        "9":{
+            "cafeName": "키커피 컴퍼니",
+            "taste": "연한맛",
+            "coffeeBeanHome": "브라질",
+            "coordinate": [127.037464,37.5585784],
+            "number": "0507-1302-8893",
+            "location": "서울특별시 성동구 왕십리로 269 1층 키커피",
+            "americanoPrice": "3900",
+            "cafeBusinessHours": "평일 09:00 - 22:00"
+        },
+        "10":{
+            "cafeName": "뜨아아아커피집",
+            "taste": "쓴맛",
+            "coffeeBeanHome": "케냐",
+            "coordinate": [127.035031,37.5602189],
+            "number": "0507-1319-4498",
+            "location": "서울특별시 성동구 고산자로12길 1-1",
+            "americanoPrice": "4000",
+            "cafeBusinessHours": "매일 10:00 - 22:00"
+        },
+         "11":{
+             "cafeName": "톤즈커피",
+             "taste": "연한맛",
+             "coffeeBeanHome": "인도네시아",
+             "coordinate": [127.040216,37.5618751],
+             "number": "0507-1498-1155",
+             "location": "서울특별시 성동구 마조로11길 12 1층",
+             "americanoPrice": "3800",
+             "cafeBusinessHours": "매일 11:00 - 23:00"
+         },
+         "12":{
+             "cafeName": "나인헤르츠",
+             "taste": "쓴맛",
+             "coffeeBeanHome": "과테말라",
+             "coordinate": [127.036287,37.5597860],
+             "number": "010-4464-4500",
+             "location": "서울특별시 성동구 왕십리로 285",
+             "americanoPrice": "3800",
+             "cafeBusinessHours": "매일 09:00 - 02:00"
+         },
+         "13":{
+             "cafeName": "uu coffee",
+             "taste": "연한맛",
+             "coffeeBeanHome": "과테말라",
+             "coordinate": [127.040668,37.5616948],
+             "number": "02-2298-9688",
+             "location": "서울특별시 성동구 마조로11길 7",
+             "americanoPrice": "3900",
+             "cafeBusinessHours": "매일 09:00 - 22:30"
+         },
+         "14":{
+             "cafeName": "10page 한양대점",
+             "taste": "연한맛",
+             "coffeeBeanHome": "브라질",
+             "coordinate": [127.039728,37.5602625],
+             "number": "없음",
+             "location": "서울특별시 성동구 마조로1가길 6",
+             "americanoPrice": "4000",
+             "cafeBusinessHours": "평일 10:00 - 24:00 토요일 10:00 - 01:00 일요일 11:00 - 22:30"
+         },
+         "15":{
+             "cafeName": "카페우유니",
+             "taste": "쓴맛",
+             "coffeeBeanHome": "케냐",
+             "coordinate": [127.047504,37.5610526],
+             "number": "0770-4256-8376",
+             "location": "서울 성동구 사근동길 59 효성빌딩",
+             "americanoPrice": "2800",
+             "cafeBusinessHours": "평일 09:00 - 21:00 주말 11:00 - 21:00 토요일, 일요일 휴무"
+         },
+         "16":{
+             "cafeName": "프롬하츠커피앤베이커리 성동구청점",
+             "taste": "신맛",
+             "coffeeBeanHome": "인도네시아",
+             "coordinate": [127.035598,37.5623541],
+             "number": "0507-1317-1152",
+             "location": "서울특별시 성동구 고산자로 253 다남매 Tower 1층",
+             "americanoPrice": "3300",
+             "cafeBusinessHours": "매일 08:00 - 24:00"
+         },
+         "17":{
+             "cafeName": "투썸플레이스 왕십리역점",
+             "taste": "쓴맛",
+             "coffeeBeanHome": "케냐",
+             "coordinate": [127.038416,37.5610558],
+             "number": "02-2200-1088",
+             "location": "서울특별시 성동구 왕십리광장로 17 왕십리민자역사 5층 sp-01",
+             "americanoPrice": "4100",
+             "cafeBusinessHours": "평일 09:00 - 23:00 금요일 09:00 - 24:00 토요일 09:00 - 24:00 일요일 09:00 - 23:00"
+         },
+         "18":{
+             "cafeName": "히포커피",
+             "taste": "연한맛",
+             "coffeeBeanHome": "인도네시아",
+             "coordinate": [127.040827,37.5616857],
+             "number": "0507-1327-2197",
+             "location": "서울특별시 성동구 마조로11길 5 히포커피",
+             "americanoPrice": "2300",
+             "cafeBusinessHours": "매일 11:00 - 23:00"
+         },
+         "19":{
+             "cafeName": "꼬밍",
+             "taste": "신맛",
+             "coffeeBeanHome": "자메이카",
+             "coordinate": [127.040091,37.5616950],
+             "number": "0507-1324-48777",
+             "location": "서울특별시 성동구 마조로11길 11-1 1층",
+             "americanoPrice": "3500",
+             "cafeBusinessHours": "매일 08:00 - 24:00"
+         },
+         "20":{
+             "cafeName": "더벤티 한양대점",
+             "taste": "연한맛",
+             "coffeeBeanHome": "코스타리카",
+             "coordinate": [127.041278,37.5597935],
+             "number": "02-3395-9874",
+             "location": "서울특별시 성동구 마조로 24",
+             "americanoPrice": "1800",
+             "cafeBusinessHours": "매일 08:00 - 10:00"
+         }
+    },
+    "bitters":{
+        "0":{
+            "cafeName": "스타벅스 한양대점",
+            "taste": "쓴맛",
+            "coordinate": "127.039525,37.5613438"
+        },
+        "1":{
+            "cafeName": "할리스커피 한양대시티빌점",
+            "taste": "쓴맛",
+            "coordinate": "127.039898, 37.5604787"
+        },
+        "2":{
+            "cafeName": "카페흥신소",
+            "taste": "쓴맛",
+            "coordinate": "127.041605, 37.5573066"
+        },
+        "3":{
+            "cafeName": "스타벅스 엔터식스 한양대점",
+            "taste": "쓴맛",
+            "coordinate": "127.040032, 37.5571810"
+        },
+        "4":{
+            "cafeName": "뜨아아아커피집",
+            "taste": "쓴맛",
+            "coordinate": "127.035031, 37.5602189"
+        },
+        "5":{
+            "cafeName": "나인헤르츠",
+            "taste": "쓴맛",
+            "coordinate": "127.036287, 37.5597860"
+        },
+        "6":{
+            "cafeName": "카페우유니",
+            "taste": "쓴맛",
+            "coordinate": "127.047504, 37.5610526"
+        },
+        "7":{
+            "cafeName": "투썸플레이스 왕십리역점",
+            "taste": "쓴맛",
+            "coordinate": "127.038416, 37.5610558"
+        }
+    },
+    "sourness":{
+        "0":{
+            "cafeName": "아리가또",
+            "taste": "신맛",
+            "coordinate": "127.039208,37.5610015"
+        },
+        "1":{
+            "cafeName": "아리가또 2호점",
+            "taste": "신맛",
+            "coordinate": "127.039525,37.5613438"
+        },
+        "2":{
+            "cafeName": "띠앋",
+            "taste": "신맛",
+            "coordinate": "127.040531, 37.5594514"
+        },
+        "3":{
+            "cafeName": "커피빈 왕십리민지역사점",
+            "taste": "신맛",
+            "coordinate": "127.038416, 37.5610558"
+        },
+        "4":{
+            "cafeName": "갈십리",
+            "taste": "신맛",
+            "coordinate": "127.040429, 37.5589198"
+        },
+        "5":{
+            "cafeName": "프롬하츠커피앤베이커리 성동구청점",
+            "taste": "신맛",
+            "coordinate": "127.035598, 37.5623541"
+        },
+        "6":{
+            "cafeName": "꼬밍",
+            "taste": "신맛",
+            "coordinate": "127.040091, 37.5616950"
+        }
+    },
+    "watery":{
+        "0":{
+            "cafeName": "키커피 컴퍼니",
+            "taste": "연한맛",
+            "coordinate": "127.037464, 37.5585784"
+        },
+        "1":{
+            "cafeName": "톤즈커피",
+            "taste": "연한맛",
+            "coordinate": "127.040216, 37.5618751"
+        },
+        "2":{
+            "cafeName": "uu coffee",
+            "taste": "연한맛",
+            "coordinate": "127.040668, 37.5616948"
+        },
+        "3":{
+            "cafeName": "10page 한양대점",
+            "taste": "연한맛",
+            "coordinate": "127.039728, 37.5602625"
+        },
+        "4":{
+            "cafeName": "히포커피",
+            "taste": "연한맛",
+            "coordinate": "127.040827, 37.5616857"
+        },
+        "5":{
+            "cafeName": "더벤티 한양대점",
+            "taste": "연한맛",
+            "coordinate": "127.041278, 37.5597935"
         }
     }
 }

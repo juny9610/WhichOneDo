@@ -26,11 +26,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-rm-UAD">
-                                <rect key="frame" x="144.5" y="144" width="125" height="32"/>
+                                <rect key="frame" x="101.5" y="144" width="211" height="32"/>
                                 <segments>
                                     <segment title="전체"/>
                                     <segment title="쓴맛"/>
                                     <segment title="신맛"/>
+                                    <segment title="연한맛"/>
                                 </segments>
                                 <connections>
                                     <action selector="filtering:" destination="Fto-fz-0rB" eventType="valueChanged" id="772-7F-6fI"/>
@@ -45,6 +46,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dNA-OO-FMO" firstAttribute="trailing" secondItem="Tzv-yJ-Mmy" secondAttribute="trailing" constant="20" id="6dZ-Ar-Bp0"/>
                             <constraint firstItem="mlZ-rm-UAD" firstAttribute="centerX" secondItem="WAP-qa-VAE" secondAttribute="centerX" id="FPe-Uq-Ens"/>
@@ -53,7 +55,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dNA-OO-FMO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="지도" id="JEf-uR-NPW"/>
+                    <tabBarItem key="tabBarItem" title="지도" image="baseline_room_white_18dp-1" id="JEf-uR-NPW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="filter" destination="mlZ-rm-UAD" id="0xj-kV-Qoi"/>
@@ -67,11 +69,12 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Wya-dx-vIi">
             <objects>
-                <tabBarController id="O6U-gJ-8rB" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="O6U-gJ-8rB" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1kc-Aj-TbT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.65490196078431373" green="0.55686274509803924" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Fto-fz-0rB" kind="relationship" relationship="viewControllers" id="gaR-bh-Uyj"/>
@@ -315,6 +318,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_room_white_18dp-1" width="18" height="18"/>
+        <image name="아이콘" width="318" height="336"/>
         <image name="GPS" width="40" height="40"/>
         <image name="아이콘" width="318" height="336"/>
     </resources>
