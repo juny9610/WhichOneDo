@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O6U-gJ-8rB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O6U-gJ-8rB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -36,10 +36,19 @@
                                     <action selector="filtering:" destination="Fto-fz-0rB" eventType="valueChanged" id="772-7F-6fI"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzv-yJ-Mmy">
+                                <rect key="frame" x="354" y="244" width="40" height="40"/>
+                                <state key="normal" image="GPS"/>
+                                <connections>
+                                    <action selector="gpsButtonTouched:" destination="Fto-fz-0rB" eventType="touchUpInside" id="hTr-lo-Fo0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dNA-OO-FMO" firstAttribute="trailing" secondItem="Tzv-yJ-Mmy" secondAttribute="trailing" constant="20" id="6dZ-Ar-Bp0"/>
                             <constraint firstItem="mlZ-rm-UAD" firstAttribute="centerX" secondItem="WAP-qa-VAE" secondAttribute="centerX" id="FPe-Uq-Ens"/>
+                            <constraint firstItem="Tzv-yJ-Mmy" firstAttribute="top" secondItem="dNA-OO-FMO" secondAttribute="top" constant="200" id="Row-KI-JdQ"/>
                             <constraint firstItem="mlZ-rm-UAD" firstAttribute="top" secondItem="dNA-OO-FMO" secondAttribute="top" constant="100" id="liD-PU-NLf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dNA-OO-FMO"/>
@@ -48,6 +57,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="filter" destination="mlZ-rm-UAD" id="0xj-kV-Qoi"/>
+                        <outlet property="gpsButton" destination="Tzv-yJ-Mmy" id="6qx-ub-n04"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOT-md-eKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -305,6 +315,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GPS" width="40" height="40"/>
         <image name="아이콘" width="318" height="336"/>
     </resources>
 </document>

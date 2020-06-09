@@ -51,7 +51,6 @@ class DetailCafeInfoViewController: UIViewController {
         super.viewDidLoad()
         cafeName.text = name
         /*
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail()
