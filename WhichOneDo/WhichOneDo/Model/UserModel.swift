@@ -17,7 +17,7 @@ class UserModel: Mappable{
     }
     public class Stars: Mappable{
         public var cafeName: String?
-        public var cafePosition: String?
+        public var cafePosition: [Double] = []
         public required init?(map: Map) {
             
         }

@@ -25,13 +25,25 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeBusinessHours: UILabel!
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
-
+    var cafePosition: [Double] = []
     var cafeArray:[CafeModel] = []
     var name: String!
-
+    @IBOutlet var btnStar: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail(name)
+        let uid = Auth.auth().currentUser?.uid
+        Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+            (datasnapshot) in
+            for item in datasnapshot.children{
+                let fchild = item as! DataSnapshot
+                let starModel = StarModel()
+                starModel.setValuesForKeys(fchild.value as! [String:Any])
+                if self.cafeName.text == starModel.cafeName{
+                    self.btnStar.isSelected = true
+                }
+            }
+        })
     }
     func get(_ name1:String){
         name = name1
@@ -54,6 +66,7 @@ class DetailCafeInfoViewController: UIViewController {
                     self.cafeBusinessHours.text = self.cafeArray[0].cafeBusinessHours
                     self.coffeeFlavor.text = self.cafeArray[0].taste
                     self.coffeeBeanHome.text = self.cafeArray[0].coffeeBeanHome
+                    self.cafePosition = self.cafeArray[0].coordinate
                     break
                 }
             }
@@ -65,7 +78,13 @@ class DetailCafeInfoViewController: UIViewController {
             sender.isSelected = false
         } else {
             sender.isSelected = true
+            let uid = Auth.auth().currentUser?.uid
+            let value: Dictionary<String, Any> = ["cafeName": cafeName.text!, "cafePosition": cafePosition]
+            Database.database().reference().child("users").child(uid!).child("stars").childByAutoId().setValue(value)
         }
+    }
+    func isStar(){
+        
     }
    
 }

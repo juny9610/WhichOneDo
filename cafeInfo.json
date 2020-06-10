@@ -1,24 +1,44 @@
 {
     "users" : {
         "9y37hRAg0bTTVcYdc0xvO4OEL792" : {
-          "userId" : "9y37hRAg0bTTVcYdc0xvO4OEL792",
-          "userName" : "인상분"
+            "stars" : {
+                "cafeName": "스타벅스 엔터식스 한양대점",
+                "cafePosition": [127.040032,37.5571810]
+            },
+            "userId" : "9y37hRAg0bTTVcYdc0xvO4OEL792",
+            "userName" : "인상분"
         },
         "CSTvJYcWNmSaT27egpud1p7RC3J3" : {
-          "userId" : "CSTvJYcWNmSaT27egpud1p7RC3J3",
-          "userName" : "최홍규"
+            "stars" : {
+                "cafeName": "스타벅스 엔터식스 한양대점",
+                "cafePosition": [127.040032,37.5571810]
+            },
+            "userId" : "CSTvJYcWNmSaT27egpud1p7RC3J3",
+            "userName" : "최홍규"
         },
         "EVCao04GqHSu9EMTU5CNnRHbptl1" : {
-          "userId" : "EVCao04GqHSu9EMTU5CNnRHbptl1",
-          "userName" : "kang"
+            "stars" : {
+                "cafeName": "스타벅스 엔터식스 한양대점",
+                "cafePosition": [127.040032,37.5571810]
+            },
+            "userId" : "EVCao04GqHSu9EMTU5CNnRHbptl1",
+            "userName" : "kang"
         },
         "GTribQmItrN6M7qJ21oCHcWgSy33" : {
-          "userId" : "GTribQmItrN6M7qJ21oCHcWgSy33",
-          "userName" : "Lang"
+            "stars" : {
+                "cafeName": "스타벅스 엔터식스 한양대점",
+                "cafePosition": [127.040032,37.5571810]
+            },
+            "userId" : "GTribQmItrN6M7qJ21oCHcWgSy33",
+            "userName" : "Lang"
         },
         "H40dtpEvTrXQVwzcUggPmWkAEH93" : {
-          "userId" : "H40dtpEvTrXQVwzcUggPmWkAEH93",
-          "userName" : "김대한"
+            "stars" : {
+                "cafeName": "스타벅스 엔터식스 한양대점",
+                "cafePosition": [127.040032,37.5571810]
+            },
+            "userId" : "H40dtpEvTrXQVwzcUggPmWkAEH93",
+            "userName" : "김대한"
         }
     },
     "cafes":{
@@ -232,116 +252,5 @@
              "americanoPrice": "1800",
              "cafeBusinessHours": "매일 08:00 - 10:00"
          }
-    },
-    "bitters":{
-        "0":{
-            "cafeName": "스타벅스 한양대점",
-            "taste": "쓴맛",
-            "coordinate": "127.039525,37.5613438"
-        },
-        "1":{
-            "cafeName": "할리스커피 한양대시티빌점",
-            "taste": "쓴맛",
-            "coordinate": "127.039898, 37.5604787"
-        },
-        "2":{
-            "cafeName": "카페흥신소",
-            "taste": "쓴맛",
-            "coordinate": "127.041605, 37.5573066"
-        },
-        "3":{
-            "cafeName": "스타벅스 엔터식스 한양대점",
-            "taste": "쓴맛",
-            "coordinate": "127.040032, 37.5571810"
-        },
-        "4":{
-            "cafeName": "뜨아아아커피집",
-            "taste": "쓴맛",
-            "coordinate": "127.035031, 37.5602189"
-        },
-        "5":{
-            "cafeName": "나인헤르츠",
-            "taste": "쓴맛",
-            "coordinate": "127.036287, 37.5597860"
-        },
-        "6":{
-            "cafeName": "카페우유니",
-            "taste": "쓴맛",
-            "coordinate": "127.047504, 37.5610526"
-        },
-        "7":{
-            "cafeName": "투썸플레이스 왕십리역점",
-            "taste": "쓴맛",
-            "coordinate": "127.038416, 37.5610558"
-        }
-    },
-    "sourness":{
-        "0":{
-            "cafeName": "아리가또",
-            "taste": "신맛",
-            "coordinate": "127.039208,37.5610015"
-        },
-        "1":{
-            "cafeName": "아리가또 2호점",
-            "taste": "신맛",
-            "coordinate": "127.039525,37.5613438"
-        },
-        "2":{
-            "cafeName": "띠앋",
-            "taste": "신맛",
-            "coordinate": "127.040531, 37.5594514"
-        },
-        "3":{
-            "cafeName": "커피빈 왕십리민지역사점",
-            "taste": "신맛",
-            "coordinate": "127.038416, 37.5610558"
-        },
-        "4":{
-            "cafeName": "갈십리",
-            "taste": "신맛",
-            "coordinate": "127.040429, 37.5589198"
-        },
-        "5":{
-            "cafeName": "프롬하츠커피앤베이커리 성동구청점",
-            "taste": "신맛",
-            "coordinate": "127.035598, 37.5623541"
-        },
-        "6":{
-            "cafeName": "꼬밍",
-            "taste": "신맛",
-            "coordinate": "127.040091, 37.5616950"
-        }
-    },
-    "watery":{
-        "0":{
-            "cafeName": "키커피 컴퍼니",
-            "taste": "연한맛",
-            "coordinate": "127.037464, 37.5585784"
-        },
-        "1":{
-            "cafeName": "톤즈커피",
-            "taste": "연한맛",
-            "coordinate": "127.040216, 37.5618751"
-        },
-        "2":{
-            "cafeName": "uu coffee",
-            "taste": "연한맛",
-            "coordinate": "127.040668, 37.5616948"
-        },
-        "3":{
-            "cafeName": "10page 한양대점",
-            "taste": "연한맛",
-            "coordinate": "127.039728, 37.5602625"
-        },
-        "4":{
-            "cafeName": "히포커피",
-            "taste": "연한맛",
-            "coordinate": "127.040827, 37.5616857"
-        },
-        "5":{
-            "cafeName": "더벤티 한양대점",
-            "taste": "연한맛",
-            "coordinate": "127.041278, 37.5597935"
-        }
     }
 }
