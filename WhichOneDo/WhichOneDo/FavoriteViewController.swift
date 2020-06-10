@@ -39,6 +39,24 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         cell.cafeName.text = stars[indexPath.row].cafeName
         return cell
         
+    }// 스와이프 삭제
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let uid = Auth.auth().currentUser?.uid
+            Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+                (datasnapshot) in
+                for child in datasnapshot.children{
+                    let fchild = child as! DataSnapshot
+                    let starModel = StarModel()
+                    starModel.setValuesForKeys(fchild.value as! [String:Any])
+                    if self.stars[indexPath.row].cafeName == starModel.cafeName{
+                        //firebase 삭제 구현
+                    }
+                }
+            })
+            self.stars.remove(at: indexPath.row)
+            self.favoriteTable.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     func getStarList(){
         let uid = Auth.auth().currentUser?.uid

@@ -32,18 +32,7 @@ class DetailCafeInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail(name)
-        let uid = Auth.auth().currentUser?.uid
-        Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
-            (datasnapshot) in
-            for item in datasnapshot.children{
-                let fchild = item as! DataSnapshot
-                let starModel = StarModel()
-                starModel.setValuesForKeys(fchild.value as! [String:Any])
-                if self.cafeName.text == starModel.cafeName{
-                    self.btnStar.isSelected = true
-                }
-            }
-        })
+        isStar()
     }
     func get(_ name1:String){
         name = name1
@@ -84,7 +73,18 @@ class DetailCafeInfoViewController: UIViewController {
         }
     }
     func isStar(){
-        
+        let uid = Auth.auth().currentUser?.uid
+        Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+            (datasnapshot) in
+            for item in datasnapshot.children{
+                let fchild = item as! DataSnapshot
+                let starModel = StarModel()
+                starModel.setValuesForKeys(fchild.value as! [String:Any])
+                if self.cafeName.text == starModel.cafeName{
+                    self.btnStar.isSelected = true
+                }
+            }
+        })
     }
    
 }
