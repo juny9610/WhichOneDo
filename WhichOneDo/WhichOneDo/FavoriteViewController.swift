@@ -11,6 +11,7 @@ import Firebase
 class FavoriteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var favoriteTable: UITableView!
     var stars:[UserModel.Stars] = []
+    public var deletedUid:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteTable.dataSource = self
@@ -43,14 +44,18 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             let uid = Auth.auth().currentUser?.uid
+            let v = stars[indexPath.row].cafeName
             Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
                 (datasnapshot) in
                 for child in datasnapshot.children{
                     let fchild = child as! DataSnapshot
                     let starModel = StarModel()
-                    starModel.setValuesForKeys(fchild.value as! [String:Any])
-                    if self.stars[indexPath.row].cafeName == starModel.cafeName{
-                        //firebase 삭제 구현
+                    starModel.setValuesForKeys(fchild.value as! [String : Any])
+                    if starModel.cafeName == v{
+                        self.deletedUid = fchild.key
+                        print("delete uid: ", self.deletedUid)
+                        Database.database().reference().child("users").child(uid!).child("stars").child(self.deletedUid!).removeValue()
+                        break
                     }
                 }
             })
