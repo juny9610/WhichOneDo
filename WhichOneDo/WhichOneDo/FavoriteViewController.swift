@@ -11,7 +11,6 @@ import Firebase
 class FavoriteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var favoriteTable: UITableView!
     var stars:[UserModel.Stars] = []
-    public var deletedUid:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteTable.dataSource = self
@@ -52,9 +51,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
                     let starModel = StarModel()
                     starModel.setValuesForKeys(fchild.value as! [String : Any])
                     if starModel.cafeName == v{
-                        self.deletedUid = fchild.key
-                        print("delete uid: ", self.deletedUid)
-                        Database.database().reference().child("users").child(uid!).child("stars").child(self.deletedUid!).removeValue()
+                        Database.database().reference().child("users").child(uid!).child("stars").child(fchild.key).removeValue()
                         break
                     }
                 }

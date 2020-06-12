@@ -64,6 +64,19 @@ class DetailCafeInfoViewController: UIViewController {
     
     @IBAction func favoriteTapped(_ sender: UIButton){
         if sender.isSelected {
+            let uid = Auth.auth().currentUser?.uid
+//            Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+//                (datasnapshot) in
+//                for child in datasnapshot.children{
+//                    let fchild = child as! DataSnapshot
+//                    let starModel = StarModel()
+//                    starModel.setValuesForKeys(fchild.value as! [String : Any])
+//                    if starModel.cafeName == self.cafeName.text{
+//                        Database.database().reference().child("users").child(uid!).child("stars").child(fchild.key).removeValue()
+//                        break
+//                    }
+//                }
+//            })
             sender.isSelected = false
         } else {
             sender.isSelected = true
