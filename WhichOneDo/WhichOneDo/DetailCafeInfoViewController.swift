@@ -29,6 +29,7 @@ class DetailCafeInfoViewController: UIViewController {
     var cafeArray:[CafeModel] = []
     var name: String!
     @IBOutlet var btnStar: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCafeDetail(name)
