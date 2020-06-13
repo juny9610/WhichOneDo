@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteTableViewCell: UITableViewCell {
+class FavoriteViewCell: UITableViewCell {
 
     @IBOutlet var cafeName: UILabel!
     
