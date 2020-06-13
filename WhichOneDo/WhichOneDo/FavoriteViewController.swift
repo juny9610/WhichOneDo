@@ -44,7 +44,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         if editingStyle == .delete{
             let uid = Auth.auth().currentUser?.uid
             let v = stars[indexPath.row].cafeName
-            Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+            Database.database().reference().child("users").child(uid!).child("stars").observeSingleEvent(of: DataEventType.value, with: {
                 (datasnapshot) in
                 for child in datasnapshot.children{
                     let fchild = child as! DataSnapshot
