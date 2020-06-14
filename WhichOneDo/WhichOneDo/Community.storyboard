@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--커뮤니티-->
         <scene sceneID="LGB-Pf-Xfb">
             <objects>
-                <tableViewController id="xTC-uc-vT0" customClass="CommunityTableViewController" customModule="WhichOneDo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="CommunityTableViewController" storyboardIdentifier="CommunityTableViewController" title="커뮤니티" id="xTC-uc-vT0" customClass="CommunityTableViewController" customModule="WhichOneDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EgY-BM-oP4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,23 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lg4-1e-lUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="161"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="H6x-Xk-Wfn">
-            <objects>
-                <navigationController storyboardIdentifier="Community" id="F8C-R6-IKd" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="93i-b1-sZE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xTC-uc-vT0" kind="relationship" relationship="rootViewController" id="PVw-bA-Uh5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xnO-xv-eLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-426" y="161"/>
+            <point key="canvasLocation" x="110" y="181"/>
         </scene>
     </scenes>
 </document>

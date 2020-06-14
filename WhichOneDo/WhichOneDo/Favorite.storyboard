@@ -50,7 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Is5-gL-WtH"/>
                     <connections>
-                        <outlet property="favoriteTable" destination="Zty-d7-l34" id="t0b-vN-bJB"/>
+                        <outlet property="favoriteTable" destination="Zty-d7-l34" id="IQF-L0-NAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEF-us-f3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

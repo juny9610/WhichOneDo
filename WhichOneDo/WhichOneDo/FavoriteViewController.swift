@@ -9,13 +9,16 @@
 import UIKit
 import Firebase
 class FavoriteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet var favoriteTable: UITableView!
+
     var stars:[UserModel.Stars] = []
+    @IBOutlet var favoriteTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         favoriteTable.dataSource = self
         favoriteTable.delegate = self
         favoriteTable.register(UINib.init(nibName: "FavoriteViewCell", bundle: nil), forCellReuseIdentifier: "FavoriteViewCell")
+        //self.tabBarItem.image = UIImage(named: "favorite_tabbar")
+        //self.tabBarItem.selectedImage = UIImage(named: "favorite_tabbar")
         getStarList()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

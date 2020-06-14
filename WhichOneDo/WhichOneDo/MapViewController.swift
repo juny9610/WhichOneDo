@@ -14,16 +14,17 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var bitters: [MTMapPOIItem] = []
     var sourness:  [MTMapPOIItem] = []
     var watery: [MTMapPOIItem] = []
-    
     var filterArray: [CafeModel] = []
     var new_coordinate:[String] = []
     var gpsImage: UIImage!
+    
     @IBOutlet var gpsButton: UIButton!
     @IBOutlet var filter: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //create MapView
+
         mapView = MTMapView(frame: self.view.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
