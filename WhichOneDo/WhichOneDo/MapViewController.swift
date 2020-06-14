@@ -91,8 +91,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         vcName?.get(poiItem.itemName)
         vcName?.modalTransitionStyle = .coverVertical
         self.present(vcName!, animated: true, completion: nil)
-        
     }
+    
     @IBAction func gpsButtonTouched(_ sender: Any) {
         mapView.currentLocationTrackingMode = .onWithHeading
     }

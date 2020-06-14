@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aqk-Gt-F1N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -16,9 +15,9 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyo-gF-M7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="-218"/>
+            <point key="canvasLocation" x="2417" y="-624"/>
         </scene>
-        <!--지도-->
+        <!--map-->
         <scene sceneID="gha-Kv-7zU">
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="Fto-fz-0rB" customClass="MapViewController" customModule="WhichOneDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +55,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dNA-OO-FMO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="지도" image="baseline_room_white_18dp-1" id="JEf-uR-NPW"/>
+                    <tabBarItem key="tabBarItem" title="map" image="cafepin_tabbar" selectedImage="cafepin_tabbar" id="JEf-uR-NPW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="filter" destination="mlZ-rm-UAD" id="0xj-kV-Qoi"/>
@@ -65,17 +64,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOT-md-eKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1683" y="73"/>
+            <point key="canvasLocation" x="1822" y="-624"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="oTS-ij-9u2">
+            <objects>
+                <viewController id="j4n-UM-w9b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yUA-IL-qYA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrL-Lf-eKQ">
+                                <rect key="frame" x="0.0" y="0.0" width="429" height="715"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="VW1-BT-KCy" kind="show" id="p8N-he-IzH"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LTd-iM-pLb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="community_tabbar" selectedImage="community_tabbar" id="aHx-oB-HNs"/>
+                    <navigationItem key="navigationItem" id="kPO-YV-MzK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPh-Hg-jya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="798"/>
         </scene>
         <!--FavoriteViewController-->
         <scene sceneID="eEd-oI-ecN">
             <objects>
                 <viewControllerPlaceholder storyboardName="Favorite" referencedIdentifier="FavoriteViewController" id="RcJ-5x-cCp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qjD-nO-aLw"/>
+                    <navigationItem key="navigationItem" id="lor-nt-t7c"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhL-iA-QPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357" y="447"/>
+            <point key="canvasLocation" x="2418" y="73"/>
+        </scene>
+        <!--CommunityTableViewController-->
+        <scene sceneID="ocH-jH-kCF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Community" referencedIdentifier="CommunityTableViewController" id="VW1-BT-KCy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="syS-Ux-6Yv"/>
+                    <navigationItem key="navigationItem" id="G4w-tt-fvG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n55-cg-Wvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525" y="798"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wya-dx-vIi">
@@ -89,7 +126,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Fto-fz-0rB" kind="relationship" relationship="viewControllers" id="gaR-bh-Uyj"/>
-                        <segue destination="RcJ-5x-cCp" kind="relationship" relationship="viewControllers" id="9Cf-hw-3bv"/>
+                        <segue destination="vH9-63-2tf" kind="relationship" relationship="viewControllers" id="WeV-Ap-fhN"/>
+                        <segue destination="j4n-UM-w9b" kind="relationship" relationship="viewControllers" id="hDr-w3-Z0d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5k-2z-w1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -328,10 +366,38 @@
             </objects>
             <point key="canvasLocation" x="242" y="73"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="9hP-WP-WlI">
+            <objects>
+                <viewController id="vH9-63-2tf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlY-zE-Pc3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lZ-hi-PG5">
+                                <rect key="frame" x="0.0" y="0.0" width="429" height="715"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="RcJ-5x-cCp" kind="show" id="jkh-3k-kZQ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OlY-u1-TMc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="favorite_tabbar" selectedImage="favorite_tabbar" id="dOL-Iu-Egs"/>
+                    <navigationItem key="navigationItem" id="esg-Q2-36I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okb-f4-tZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="73"/>
+        </scene>
     </scenes>
     <resources>
         <image name="GPS" width="40" height="40"/>
-        <image name="baseline_room_white_18dp-1" width="18" height="18"/>
+        <image name="cafepin_tabbar" width="24" height="24"/>
+        <image name="community_tabbar" width="24" height="24"/>
+        <image name="favorite_tabbar" width="24" height="24"/>
         <image name="아이콘" width="318" height="336"/>
     </resources>
 </document>
