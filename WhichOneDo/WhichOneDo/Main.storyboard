@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O6U-gJ-8rB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aqk-Gt-F1N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -67,6 +67,16 @@
             </objects>
             <point key="canvasLocation" x="1683" y="73"/>
         </scene>
+        <!--FavoriteViewController-->
+        <scene sceneID="eEd-oI-ecN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorite" referencedIdentifier="FavoriteViewController" id="RcJ-5x-cCp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qjD-nO-aLw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhL-iA-QPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357" y="447"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wya-dx-vIi">
             <objects>
@@ -79,6 +89,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Fto-fz-0rB" kind="relationship" relationship="viewControllers" id="gaR-bh-Uyj"/>
+                        <segue destination="RcJ-5x-cCp" kind="relationship" relationship="viewControllers" id="9Cf-hw-3bv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5k-2z-w1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

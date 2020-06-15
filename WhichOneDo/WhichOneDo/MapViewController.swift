@@ -63,10 +63,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 }
                 return poiItem
             })
-            print("poiItem: ", self.poiItems.count)
-            print("bitters: ", self.bitters.count)
-            print("ssourness: ", self.sourness.count)
-            print("watery: ", self.watery.count)
             self.mapView.addPOIItems(self.poiItems)
             self.mapView.fitAreaToShowAllPOIItems()
             self.view.addSubview(self.mapView)
