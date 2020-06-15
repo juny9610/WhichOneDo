@@ -8,25 +8,6 @@
 
 import UIKit
 import Firebase
-struct Cafe{
-    var cafeImage : String
-    var cafeName : String
-    var coffeeBeanHome : String
-    var coffeeFlavor : String
-    var americanoPrice : String
-    var cafeBusinessHours : String
-    var cafeAddress : String
-    var cafePhone : String
-}
-
-var cafes : [Cafe] = [
-    Cafe(cafeImage: "스타벅스", cafeName: "스타벅스 한양대점", coffeeBeanHome: "케냐", coffeeFlavor: "쓴맛", americanoPrice: "4100원", cafeBusinessHours: "월 : 07 : 30 ~ 20 : 00\n화 : 07 : 30 ~ 20 : 00\n수 : 07 : 30 ~ 20 : 00\n목 : 07 : 30 ~ 20 : 00\n금 : 07 : 30 ~ 20 : 00\n토 : 07 : 30 ~ 20 : 00\n일 : 07 : 30 ~ 20 : 00", cafeAddress: "서울시 성동구 왕십리로 225", cafePhone: "02-1522-3232"),
-    Cafe(cafeImage: "", cafeName: "아리가또", coffeeBeanHome: "과테말라", coffeeFlavor: "신맛", americanoPrice: "3800원", cafeBusinessHours: "", cafeAddress: "서울시 성동구 마조로1길 39", cafePhone: ""),
-    Cafe(cafeImage: "", cafeName: "띠앋", coffeeBeanHome: "코스타리카", coffeeFlavor: "쓴맛, 신맛", americanoPrice: "2500원", cafeBusinessHours: "", cafeAddress: "서울시 성동구 마조로 17 1층 제2호", cafePhone: "010-8429-9308"),
-    Cafe(cafeImage: "", cafeName: "카페흥신소", coffeeBeanHome: "코스타리카", coffeeFlavor: "쓴맛", americanoPrice: "4500원", cafeBusinessHours: "", cafeAddress: "서울시 성동구 왕십리로 231 1층", cafePhone: "0507-1342-2143"),
-    Cafe(cafeImage: "", cafeName: "커피빈 왕십리민자역사점", coffeeBeanHome: "인도네시아", coffeeFlavor: "고소한맛", americanoPrice: "4800원", cafeBusinessHours: "", cafeAddress: "서울시 성동구 왕십리광장로 17", cafePhone: "02-2200-6120")
-]
-
 class DetailCafeInfoViewController: UIViewController {
     //txt outlet
     @IBOutlet var txtCoffeeBeanHome: UILabel!
@@ -44,34 +25,21 @@ class DetailCafeInfoViewController: UIViewController {
     @IBOutlet var cafeBusinessHours: UILabel!
     @IBOutlet var cafeAddress: UILabel!
     @IBOutlet var cafePhone: UILabel!
-
+    var cafePosition: [Double] = []
     var cafeArray:[CafeModel] = []
     var name: String!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        cafeName.text = name
-        /*
-    
+    @IBOutlet var btnStar: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCafeDetail()
-        print(cafeArray)
-        cafeImage.image = UIImage(named: cafes[0].cafeImage)
-        cafeName.text = cafes[0].cafeName
-        coffeeBeanHome.text = cafes[0].coffeeBeanHome
-        coffeeFlavor.text = cafes[0].coffeeFlavor
-        americanoPrice.text = cafes[0].americanoPrice
-        cafeBusinessHours.text = cafes[0].cafeBusinessHours
-        cafeAddress.text = cafes[0].cafeAddress
-        cafePhone.text = cafes[0].cafePhone
-        */
+        getCafeDetail(name)
+        isStar()
     }
     func get(_ name1:String){
         name = name1
     }
 
-    func getCafeDetail(){
+    func getCafeDetail(_ name1: String){
         Database.database().reference().child("cafes").observe(DataEventType.value, with: {
             (datasnapshot) in
             self.cafeArray.removeAll()
@@ -79,34 +47,58 @@ class DetailCafeInfoViewController: UIViewController {
                 let fchild = child as! DataSnapshot
                 let cafeModel = CafeModel()
                 cafeModel.setValuesForKeys(fchild.value as! [String:Any])
-                self.cafeArray.append(cafeModel)
+                if cafeModel.cafeName == name1{
+                    self.cafeArray.append(cafeModel)
+                    self.cafeName.text = name1
+                    self.americanoPrice.text = self.cafeArray[0].americanoPrice
+                    self.cafeAddress.text = self.cafeArray[0].location
+                    self.cafePhone.text = self.cafeArray[0].number
+                    self.cafeBusinessHours.text = self.cafeArray[0].cafeBusinessHours
+                    self.coffeeFlavor.text = self.cafeArray[0].taste
+                    self.coffeeBeanHome.text = self.cafeArray[0].coffeeBeanHome
+                    self.cafePosition = self.cafeArray[0].coordinate
+                    break
+                }
             }
         })
     }
-    /*
-    func showData (forRowAt indexPath: IndexPath) {
-        
-        //cafeImage.text = "이미지가 없습니다."
-        //cafeImage.text = cafes[indexPath.row].cafeImage
-        cafeName.text = cafes[indexPath.row].cafeName
-        coffeeBeanHome.text = cafes[indexPath.row].coffeeBeanHome
-        coffeeFlavor.text = cafes[indexPath.row].coffeeFlavor
-        americanoPrice.text = cafes[indexPath.row].americanoPrice
-        cafeBusinessHours.text = cafes[indexPath.row].cafeBusinessHours
-        cafeAddress.text = cafes[indexPath.row].cafeAddress
-        cafePhone.text = cafes[indexPath.row].cafePhone
-        
+    
+    @IBAction func favoriteTapped(_ sender: UIButton){
+        if sender.isSelected {
+            let uid = Auth.auth().currentUser?.uid
+            Database.database().reference().child("users").child(uid!).child("stars").observeSingleEvent(of:DataEventType.value, with: {
+                (datasnapshot) in
+                for child in datasnapshot.children{
+                    let fchild = child as! DataSnapshot
+                    let starModel = StarModel()
+                    starModel.setValuesForKeys(fchild.value as! [String : Any])
+                    if starModel.cafeName == self.cafeName.text{
+                        Database.database().reference().child("users").child(uid!).child("stars").child(fchild.key).removeValue()
+                        break
+                    }
+                }
+            })
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
+            let uid = Auth.auth().currentUser?.uid
+            let value: Dictionary<String, Any> = ["cafeName": cafeName.text!, "cafePosition": cafePosition]
+            Database.database().reference().child("users").child(uid!).child("stars").childByAutoId().setValue(value)
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func isStar(){
+        let uid = Auth.auth().currentUser?.uid
+        Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+            (datasnapshot) in
+            for item in datasnapshot.children{
+                let fchild = item as! DataSnapshot
+                let starModel = StarModel()
+                starModel.setValuesForKeys(fchild.value as! [String:Any])
+                if self.cafeName.text == starModel.cafeName{
+                    self.btnStar.isSelected = true
+                }
+            }
+        })
     }
-    */
-
+   
 }

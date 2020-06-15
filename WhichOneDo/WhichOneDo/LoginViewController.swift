@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         Auth.auth().addStateDidChangeListener{
             (auth, user) in
             if user != nil{
-                let view = self.storyboard?.instantiateViewController(identifier: "MapViewController") as! MapViewController
+                let view = self.storyboard?.instantiateViewController(identifier: "MainTabBarController") as! UITabBarController
                 view.modalPresentationStyle = .fullScreen
                 self.present(view, animated: true, completion: nil)
             }
@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         })
+        print("login")
     }
     
 }
