@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O6U-gJ-8rB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O6U-gJ-8rB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -27,6 +27,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-rm-UAD">
                                 <rect key="frame" x="101.5" y="144" width="211" height="32"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="0.55559529049295775" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="전체"/>
                                     <segment title="쓴맛"/>
@@ -74,7 +75,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.65490196078431373" green="0.55686274509803924" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.6494204402" green="0.55376344919999998" blue="0.47762107850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Fto-fz-0rB" kind="relationship" relationship="viewControllers" id="gaR-bh-Uyj"/>
@@ -318,9 +319,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_room_white_18dp-1" width="18" height="18"/>
-        <image name="아이콘" width="318" height="336"/>
         <image name="GPS" width="40" height="40"/>
+        <image name="baseline_room_white_18dp-1" width="18" height="18"/>
         <image name="아이콘" width="318" height="336"/>
     </resources>
 </document>
