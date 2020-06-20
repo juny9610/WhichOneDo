@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 class CafeModel: NSObject {
+    @objc var cafeId: String?
     @objc var americanoPrice: String?
     @objc var cafeBusinessHours: String?
     @objc var cafeName: String?

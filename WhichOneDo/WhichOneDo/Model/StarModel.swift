@@ -9,6 +9,7 @@
 import UIKit
 
 class StarModel: NSObject {
+    @objc var cafeId: String?
     @objc var cafeName: String?
     @objc var cafePosition: [Double] = []
 }
