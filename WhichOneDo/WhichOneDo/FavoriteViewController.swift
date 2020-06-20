@@ -92,7 +92,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             }
 
             print("stars: ", self.stars)
-            //self.favoriteTable.reloadData()
         })
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
