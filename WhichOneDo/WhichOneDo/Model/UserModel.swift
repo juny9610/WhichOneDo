@@ -16,6 +16,7 @@ class UserModel: Mappable{
         users <- map["users"]
     }
     public class Stars: Mappable{
+        public var cafeId: String?
         public var cafeName: String?
         public var cafePosition: [Double] = []
         public required init?(map: Map) {
