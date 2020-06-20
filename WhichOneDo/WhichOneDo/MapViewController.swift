@@ -20,11 +20,13 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var filterArray: [CafeModel] = []
     var new_coordinate:[String] = []
     var gpsImage: UIImage!
+    
     @IBOutlet var gpsButton: UIButton!
     @IBOutlet var filter: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         //create MapView
+
         mapView = MTMapView(frame: self.view.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
@@ -106,8 +108,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         vcName?.get(cafe.cafeName!)
         vcName?.modalTransitionStyle = .coverVertical
         self.present(vcName!, animated: true, completion: nil)
-        
     }
+    
     @IBAction func gpsButtonTouched(_ sender: Any) {
         mapView.currentLocationTrackingMode = .onWithoutHeading
     }

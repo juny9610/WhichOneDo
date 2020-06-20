@@ -13,6 +13,7 @@
 		1431B7052484FCBC00F29232 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B7042484FCBC00F29232 /* FavoriteViewController.swift */; };
 		1431B7082484FE5D00F29232 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431B7062484FE5D00F29232 /* FavoriteViewCell.swift */; };
 		1431B7092484FE5D00F29232 /* FavoriteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1431B7072484FE5D00F29232 /* FavoriteViewCell.xib */; };
+		146F6ABE249608840048C065 /* CommunityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F6ABD249608840048C065 /* CommunityTableViewController.swift */; };
 		259234CE2484E15A000F03A6 /* CafeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259234CD2484E15A000F03A6 /* CafeModel.swift */; };
 		25A4906B247FC00100254FCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4906A247FC00100254FCB /* LoginViewController.swift */; };
 		25A49071247FC14000254FCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A49070247FC14000254FCB /* GoogleService-Info.plist */; };
@@ -75,6 +76,7 @@
 		1431B7042484FCBC00F29232 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		1431B7062484FE5D00F29232 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
 		1431B7072484FE5D00F29232 /* FavoriteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewCell.xib; sourceTree = "<group>"; };
+		146F6ABD249608840048C065 /* CommunityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewController.swift; sourceTree = "<group>"; };
 		259234CD2484E15A000F03A6 /* CafeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeModel.swift; sourceTree = "<group>"; };
 		25A4906A247FC00100254FCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A49070247FC14000254FCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				259234CF2484E161000F03A6 /* Model */,
+				146F6ABD249608840048C065 /* CommunityTableViewController.swift */,
 				1431B7022484FCA600F29232 /* Favorite.storyboard */,
 				1431B7042484FCBC00F29232 /* FavoriteViewController.swift */,
 				1431B7062484FE5D00F29232 /* FavoriteViewCell.swift */,
@@ -467,6 +470,7 @@
 				25DE60A32490EDDD001A1AA8 /* StarModel.swift in Sources */,
 				25DE60A12490B6DE001A1AA8 /* UserModel.swift in Sources */,
 				1431B7082484FE5D00F29232 /* FavoriteViewCell.swift in Sources */,
+				146F6ABE249608840048C065 /* CommunityTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
