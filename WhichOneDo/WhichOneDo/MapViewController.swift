@@ -39,6 +39,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         let favoriteViewController = self.tabBarController?.viewControllers![1] as! FavoriteViewController
         favoriteViewController.getStarList1()
         getfilteredList()
+
     }
     func getfilteredList(){
            Database.database().reference().child("cafes").observe(DataEventType.value, with: {
@@ -89,7 +90,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.mapView.addPOIItems(self.poiItems)
             self.view.addSubview(self.filter)
             self.view.addSubview(self.gpsButton)
+
+            self.mapView.showCurrentLocationMarker = true
+            self.mapView.currentLocationTrackingMode = .onWithoutHeading
+
             self.mapView.fitAreaToShowAllPOIItems()
+
            })
        }
     @IBAction func filtering(_ sender: Any) {
