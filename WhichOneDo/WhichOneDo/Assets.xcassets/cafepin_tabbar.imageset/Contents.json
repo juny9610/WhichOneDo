@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "대표이미지.png",
+      "filename" : "cafepin.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "대표이미지-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "대표이미지-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -19,5 +17,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }
