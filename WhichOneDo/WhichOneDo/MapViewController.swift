@@ -55,7 +55,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 poiItem.userObject = cafe
                 poiItem.itemName = cafe.cafeName! + "\n" + cafe.taste!
                 poiItem.markerType = .customImage
-                poiItem.customImage = UIImage(named: "map_pin_brown.png")
+                poiItem.customImage = UIImage(named: "map_pin_brown")
                 poiItem.markerSelectedType = .customImage
                 poiItem.customSelectedImage = UIImage(named: "map_pin_selected.png")
                 poiItem.showAnimationType = .noAnimation
