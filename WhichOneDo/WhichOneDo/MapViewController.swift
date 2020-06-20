@@ -55,9 +55,9 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 poiItem.userObject = cafe
                 poiItem.itemName = cafe.cafeName! + "\n" + cafe.taste!
                 poiItem.markerType = .customImage
-                poiItem.customImageName = "map_pin_brown.png"
+                poiItem.customImage = UIImage(named: "map_pin_brown")
                 poiItem.markerSelectedType = .customImage
-                poiItem.customSelectedImageName = "map_pin_selected.png"
+                poiItem.customSelectedImage = UIImage(named: "map_pin_selected.png")
                 poiItem.showAnimationType = .noAnimation
                 poiItem.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: cafe.coordinate[1], longitude: cafe.coordinate[0]))
                 switch cafe.taste{
