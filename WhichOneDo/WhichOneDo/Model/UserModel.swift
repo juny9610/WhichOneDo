@@ -25,6 +25,7 @@ class UserModel: Mappable{
         public func mapping(map: Map) {
             cafeName <- map["cafeName"]
             cafePosition <- map["cafePosition"]
+            cafeId <- map["cafeId"]
         }
     }
 

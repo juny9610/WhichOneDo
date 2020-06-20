@@ -28,6 +28,7 @@ class DetailCafeInfoViewController: UIViewController {
     var cafePosition: [Double] = []
     var cafeArray:[CafeModel] = []
     var name: String!
+    var cafeId: String!
     @IBOutlet var btnStar: UIButton!
     
     override func viewDidLoad() {
@@ -57,6 +58,7 @@ class DetailCafeInfoViewController: UIViewController {
                     self.coffeeFlavor.text = self.cafeArray[0].taste
                     self.coffeeBeanHome.text = self.cafeArray[0].coffeeBeanHome
                     self.cafePosition = self.cafeArray[0].coordinate
+                    self.cafeId = self.cafeArray[0].cafeId
                     break
                 }
             }
@@ -82,7 +84,7 @@ class DetailCafeInfoViewController: UIViewController {
         } else {
             sender.isSelected = true
             let uid = Auth.auth().currentUser?.uid
-            let value: Dictionary<String, Any> = ["cafeName": cafeName.text!, "cafePosition": cafePosition]
+            let value: Dictionary<String, Any> = ["cafeName": cafeName.text!, "cafePosition": cafePosition, "cafeId": cafeId!]
             Database.database().reference().child("users").child(uid!).child("stars").childByAutoId().setValue(value)
         }
     }
