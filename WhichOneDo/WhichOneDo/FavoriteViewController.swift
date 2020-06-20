@@ -74,4 +74,20 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             self.favoriteTable.reloadData()
         })
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
+        let mapView = mapViewController.mapView
+        let poiItems = mapViewController.poiItems
+        let myPOIItem = poiItems!.filter{(poiItem: MTMapPOIItem) -> Bool in
+            let cafe = poiItem.userObject as! CafeModel
+            return cafe.cafeName == stars[indexPath.row].cafeName
+        }
+        print(myPOIItem[0].mapPoint.mapPointGeo())
+        mapView?.removeAllPOIItems()
+        mapView?.addPOIItems(myPOIItem)
+        mapView?.select(myPOIItem[0], animated: true)
+        self.tabBarController?.selectedIndex = 0
+        mapView?.setZoomLevel(1, animated: true)
+        mapView?.setMapCenter(myPOIItem[0].mapPoint, animated: true)
+    }
 }

@@ -9,26 +9,33 @@
 import UIKit
 import Firebase
 class MapViewController: UIViewController, MTMapViewDelegate {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
     var mapView: MTMapView!
     var poiItems: [MTMapPOIItem]!
     var bitters: [MTMapPOIItem] = []
     var sourness:  [MTMapPOIItem] = []
     var watery: [MTMapPOIItem] = []
-    
     var filterArray: [CafeModel] = []
     var new_coordinate:[String] = []
     var gpsImage: UIImage!
     @IBOutlet var gpsButton: UIButton!
     @IBOutlet var filter: UISegmentedControl!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //create MapView
         mapView = MTMapView(frame: self.view.bounds)
         mapView.delegate = self
         mapView.baseMapType = .standard
-        //mapView.showCurrentLocationMarker = true
-        //mapView.currentLocationTrackingMode = .onWithHeading
+        gpsImage = UIImage(named: "GPS")
+        let new_image = gpsImage.withTintColor(UIColor(red: 80/255.0, green: 60/255.0, blue: 39/255.0, alpha: 1))
+        gpsButton.setImage(new_image, for: .normal)
+        let currentLocationMarker = MTMapLocationMarkerItem()
+        currentLocationMarker.customTrackingImageName = "tracking_icon.png"
+        mapView.updateCurrentLocationMarker(currentLocationMarker)
+        filter.backgroundColor = UIColor(red: 167/255.0, green: 142/255.0, blue: 122/255.0, alpha: 1)
+        
         getfilteredList()
     }
     func getfilteredList(){
@@ -43,9 +50,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                }
             self.poiItems = self.filterArray.map({(cafe) -> MTMapPOIItem in
                 let poiItem = MTMapPOIItem()
-                poiItem.itemName = cafe.cafeName
-                poiItem.markerType = .bluePin
-                poiItem.markerSelectedType = .redPin
+                poiItem.userObject = cafe
+                poiItem.itemName = cafe.cafeName! + "\n" + cafe.taste!
+                poiItem.markerType = .customImage
+                poiItem.customImageName = "map_pin_brown.png"
+                poiItem.markerSelectedType = .customImage
+                poiItem.customSelectedImageName = "map_pin_selected.png"
                 poiItem.showAnimationType = .noAnimation
                 poiItem.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: cafe.coordinate[1], longitude: cafe.coordinate[0]))
                 switch cafe.taste{
@@ -60,10 +70,12 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                 }
                 return poiItem
             })
-            self.mapView.addPOIItems(self.poiItems)
-            self.mapView.fitAreaToShowAllPOIItems()
             self.view.addSubview(self.mapView)
+            self.mapView.addPOIItems(self.poiItems)
             self.view.addSubview(self.filter)
+            self.view.addSubview(self.gpsButton)
+            self.mapView.showCurrentLocationMarker = true
+            self.mapView.currentLocationTrackingMode = .onWithoutHeading
            })
        }
     @IBAction func filtering(_ sender: Any) {
@@ -84,16 +96,20 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         default:
             break
         }
+        mapView.currentLocationTrackingMode = .off
+        mapView.fitAreaToShowAllPOIItems()
     }
     
     func mapView(_ mapView: MTMapView!, touchedCalloutBalloonRightSideOf poiItem: MTMapPOIItem!) {
         let vcName = self.storyboard?.instantiateViewController(withIdentifier: "DetailCafeInfoViewController") as? DetailCafeInfoViewController
-        vcName?.get(poiItem.itemName)
+        let cafe = poiItem.userObject as! CafeModel
+        vcName?.get(cafe.cafeName!)
         vcName?.modalTransitionStyle = .coverVertical
         self.present(vcName!, animated: true, completion: nil)
         
     }
     @IBAction func gpsButtonTouched(_ sender: Any) {
-        mapView.currentLocationTrackingMode = .onWithHeading
+        mapView.currentLocationTrackingMode = .onWithoutHeading
     }
+
 }

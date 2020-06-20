@@ -10,5 +10,6 @@
 #define Bridging_Header_h
 
 #import <DaumMap/MTMapView.h>
+#import <DaumMap/MTMapCameraUpdate.h>
 
 #endif /* Bridging_Header_h */
