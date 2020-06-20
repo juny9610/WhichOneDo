@@ -64,6 +64,8 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     func getStarList(){
+        let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
+        let mapView = mapViewController.mapView
         let uid = Auth.auth().currentUser?.uid
         Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
             (datasnapshot) in
@@ -75,6 +77,22 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
 
             print("stars: ", self.stars)
             self.favoriteTable.reloadData()
+        })
+    }
+    func getStarList1(){
+        let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
+        let mapView = mapViewController.mapView
+        let uid = Auth.auth().currentUser?.uid
+        Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+            (datasnapshot) in
+            self.stars.removeAll()
+            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+                let star = UserModel.Stars(JSON: item.value as! [String:Any])
+                self.stars.append(star!)
+            }
+
+            print("stars: ", self.stars)
+            //self.favoriteTable.reloadData()
         })
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
