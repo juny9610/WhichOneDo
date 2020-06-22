@@ -44,6 +44,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         
     }// 스와이프 삭제
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
         if editingStyle == .delete{
             let uid = Auth.auth().currentUser?.uid
             let v = stars[indexPath.row].cafeName
@@ -60,6 +61,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
                 }
             })
             self.stars.remove(at: indexPath.row)
+            mapViewController.mapUpdate()
             self.favoriteTable.deleteRows(at: [indexPath], with: .automatic)
         }
     }
