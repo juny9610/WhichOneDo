@@ -70,12 +70,8 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             self.stars.removeAll()
             for item in datasnapshot.children.allObjects as! [DataSnapshot]{
                 let star = UserModel.Stars(JSON: item.value as! [String:Any])
-                print("cafe id: ", star?.cafeId)
                 self.stars.append(star!)
-                print("cafe id: ", star?.cafeName)
             }
-
-            print("stars: ", self.stars)
             self.favoriteTable.reloadData()
         })
     }

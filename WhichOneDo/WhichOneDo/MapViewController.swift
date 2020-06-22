@@ -39,7 +39,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         filter.backgroundColor = UIColor(red: 167/255.0, green: 142/255.0, blue: 122/255.0, alpha: 1)
         
         getfilteredList()
-
+        
     }
     func getfilteredList(){
            Database.database().reference().child("cafes").observe(DataEventType.value, with: {
