@@ -75,6 +75,17 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             self.favoriteTable.reloadData()
         })
     }
+    func getStarList1(){
+        let uid = Auth.auth().currentUser?.uid
+        Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
+            (datasnapshot) in
+            self.stars.removeAll()
+            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+                let star = UserModel.Stars(JSON: item.value as! [String:Any])
+                self.stars.append(star!)
+            }
+        })
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
         let mapView = mapViewController.mapView
@@ -84,10 +95,9 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             return cafe.cafeName == stars[indexPath.row].cafeName
         }
         print(myPOIItem[0].mapPoint.mapPointGeo())
-        mapView?.removeAllPOIItems()
-        mapView?.addPOIItems(myPOIItem)
         mapView?.select(myPOIItem[0], animated: true)
         self.tabBarController?.selectedIndex = 0
+        mapViewController.filter.selectedSegmentIndex = 0
         mapView?.setZoomLevel(1, animated: true)
         mapView?.setMapCenter(myPOIItem[0].mapPoint, animated: true)
     }
