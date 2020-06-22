@@ -64,17 +64,13 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     func getStarList(){
-        let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
-        let mapView = mapViewController.mapView
         let uid = Auth.auth().currentUser?.uid
         Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
             (datasnapshot) in
             self.stars.removeAll()
             for item in datasnapshot.children.allObjects as! [DataSnapshot]{
                 let star = UserModel.Stars(JSON: item.value as! [String:Any])
-                print("cafe id: ", star?.cafeId)
                 self.stars.append(star!)
-                print("cafe id: ", star?.cafeName)
             }
 
             print("stars: ", self.stars)
@@ -82,8 +78,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         })
     }
     func getStarList1(){
-        let mapViewController = self.tabBarController?.viewControllers![0] as! MapViewController
-        let mapView = mapViewController.mapView
         let uid = Auth.auth().currentUser?.uid
         Database.database().reference().child("users").child(uid!).child("stars").observe(DataEventType.value, with: {
             (datasnapshot) in
@@ -92,8 +86,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
                 let star = UserModel.Stars(JSON: item.value as! [String:Any])
                 self.stars.append(star!)
             }
-
-            print("stars: ", self.stars)
         })
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -105,10 +97,9 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             return cafe.cafeName == stars[indexPath.row].cafeName
         }
         print(myPOIItem[0].mapPoint.mapPointGeo())
-        mapView?.removeAllPOIItems()
-        mapView?.addPOIItems(myPOIItem)
         mapView?.select(myPOIItem[0], animated: true)
         self.tabBarController?.selectedIndex = 0
+        mapViewController.filter.selectedSegmentIndex = 0
         mapView?.setZoomLevel(1, animated: true)
         mapView?.setMapCenter(myPOIItem[0].mapPoint, animated: true)
     }
