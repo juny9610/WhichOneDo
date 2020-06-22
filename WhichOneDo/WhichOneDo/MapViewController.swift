@@ -127,6 +127,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
     
     func mapUpdate(){
+        self.poiItems.removeAll()
         self.bitters.removeAll()
         self.sourness.removeAll()
         self.watery.removeAll()
