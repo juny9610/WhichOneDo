@@ -191,6 +191,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="don-8r-zfJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vyf-vB-c41"/>
                     <connections>
                         <outlet property="americanoPrice" destination="Mpe-zy-WHI" id="Ycg-ZI-oaM"/>
                         <outlet property="btnStar" destination="A2W-kT-f59" id="9TA-0w-NV4"/>
@@ -211,7 +212,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xs-i7-sCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375.36231884057975" y="-150"/>
+            <point key="canvasLocation" x="-104" y="88"/>
+        </scene>
+        <!--MapViewController-->
+        <scene sceneID="XcR-b4-fHY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MapViewController" storyboardName="Main" referencedIdentifier="MapViewController" id="23b-ED-iod" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gbZ-1J-5qC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRx-p3-3WH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="-410"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZfJ-qu-YPK">
+            <objects>
+                <navigationController id="M7K-JB-Lp7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qHM-cF-kVT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="23b-ED-iod" kind="relationship" relationship="rootViewController" id="JQ8-5g-Iot"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTy-Vz-PrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1216" y="-150"/>
         </scene>
     </scenes>
     <resources>

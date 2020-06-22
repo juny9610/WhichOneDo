@@ -66,6 +66,11 @@ class DetailCafeInfoViewController: UIViewController {
     }
     
     @IBAction func favoriteTapped(_ sender: UIButton){
+        let vc = self.presentingViewController as! UITabBarController
+        let mapViewController = vc.viewControllers![0] as! MapViewController
+        let favoriteViewContoller = vc.viewControllers![1] as! FavoriteViewController
+        var stars = favoriteViewContoller.stars
+        
         if sender.isSelected {
             let uid = Auth.auth().currentUser?.uid
             Database.database().reference().child("users").child(uid!).child("stars").observeSingleEvent(of:DataEventType.value, with: {
@@ -75,17 +80,27 @@ class DetailCafeInfoViewController: UIViewController {
                     let starModel = StarModel()
                     starModel.setValuesForKeys(fchild.value as! [String : Any])
                     if starModel.cafeName == self.cafeName.text{
+                        for (i,star) in stars.enumerated(){
+                            if(star.cafeName == starModel.cafeName){
+                                stars.remove(at: i)
+                                favoriteViewContoller.stars = stars
+                                break
+                            }
+                        }
                         Database.database().reference().child("users").child(uid!).child("stars").child(fchild.key).removeValue()
                         break
                     }
                 }
             })
+            mapViewController.mapUpdate()
             sender.isSelected = false
         } else {
             sender.isSelected = true
             let uid = Auth.auth().currentUser?.uid
             let value: Dictionary<String, Any> = ["cafeName": cafeName.text!, "cafePosition": cafePosition, "cafeId": cafeId!]
             Database.database().reference().child("users").child(uid!).child("stars").childByAutoId().setValue(value)
+            favoriteViewContoller.getStarList1()
+            mapViewController.mapUpdate()
         }
     }
     func isStar(){
