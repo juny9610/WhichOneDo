@@ -218,7 +218,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjg-Dh-uJS">
                                 <rect key="frame" x="20" y="400" width="374" height="230"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8v-1X-PsU" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8v-1X-PsU" customClass="YoshikoTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="c8v-1X-PsU" secondAttribute="height" multiplier="11:1" id="HfU-mD-Yng"/>
@@ -477,6 +477,9 @@
                     <navigationItem key="navigationItem" title="글쓰기" id="29m-sf-N8C">
                         <barButtonItem key="rightBarButtonItem" title="완료" style="plain" id="ibs-Tq-ZOD">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="writeDoneEvent:" destination="pNf-AS-WpV" id="zFS-QB-64T"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
