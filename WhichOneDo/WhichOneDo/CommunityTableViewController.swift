@@ -44,7 +44,6 @@ class CommunityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "communityCell", for: indexPath) as! CommunityTableViewCell
-
         cell.title.text = communityList[indexPath.row].title
         cell.time.text = communityList[indexPath.row].time
         cell.userID.text = communityList[indexPath.row].userId
