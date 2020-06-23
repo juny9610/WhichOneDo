@@ -18,14 +18,16 @@ class ContentsViewController: UIViewController {
     @IBOutlet var detailTime: UILabel!
     @IBOutlet var commentsList: UITableView!
     
-    var receiveCommunity : Community!
-    
+    var receiveCommunity : CommunityModel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let formatter = DateFormatter()
+        let write_time_string = formatter.string(from: Date())
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        detailTime.text = write_time_string
         self.navigationController?.navigationBar.tintColor = UIColor.black
 
-        detailUserID.text = receiveCommunity.userID
+        detailUserID.text = receiveCommunity.userId
         detailTitle.text = receiveCommunity.title
         detailContents.text = receiveCommunity.contents
         detailLikeNum.text = receiveCommunity.likeNum
@@ -46,7 +48,7 @@ class ContentsViewController: UIViewController {
     }
     */
 
-    func receiveCommunity(_ item: Community) {
+    func receiveCommunity(_ item: CommunityModel!) {
         receiveCommunity = item
     }
     
