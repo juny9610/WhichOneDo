@@ -50,7 +50,7 @@ class CommunityTableViewController: UITableViewController {
         cell.userID.text = communityList[indexPath.row].userId
         cell.likeNum.text = communityList[indexPath.row].likeNum
         cell.commentsNum.text = communityList[indexPath.row].commentsNum
-
+        cell.selectionStyle = .none
         return cell
     }
     

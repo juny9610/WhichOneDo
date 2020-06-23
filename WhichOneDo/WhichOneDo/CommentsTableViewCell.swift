@@ -9,11 +9,7 @@
 import UIKit
 
 class CommentsTableViewCell: UITableViewCell {
-
-    @IBOutlet var unknown: UILabel!
-    @IBOutlet var comments: UILabel!
-    @IBOutlet var commentsTime: UILabel!
-    
+    @IBOutlet var comment: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -35,6 +35,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell:FavoriteViewCell = favoriteTable.dequeueReusableCell(withIdentifier: "FavoriteViewCell", for: indexPath) as! FavoriteViewCell
         cell.cafeName.text = stars[indexPath.row].cafeName
+        cell.selectionStyle = .none
         return cell
         
     }// 스와이프 삭제
