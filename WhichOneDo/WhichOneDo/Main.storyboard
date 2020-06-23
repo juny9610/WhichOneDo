@@ -73,8 +73,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1kc-Aj-TbT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.65490196079999996" green="0.5568627451" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.52549019610000003" green="0.40784313729999999" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,6 +155,7 @@
                                             <constraint firstAttribute="width" secondItem="e1y-QF-hyn" secondAttribute="height" multiplier="187:15" id="aLK-7F-hpC"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="ek5-Ec-if0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="로그인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -168,7 +169,8 @@
                                             <constraint firstAttribute="width" constant="374" id="x7B-JG-KX5"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="bLH-Uy-39v"/>
-                                        <state key="normal" title="회원가입">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="회원 가입">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -182,7 +184,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.65490196079999996" green="0.5568627451" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.52549019607843139" green="0.40784313725490196" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Tgb-bd-rpN" firstAttribute="top" secondItem="fi2-jH-WEx" secondAttribute="bottom" constant="50" id="8ex-5U-wev"/>
@@ -276,6 +278,7 @@
                                             <constraint firstAttribute="width" constant="374" id="eB1-Ny-OjX"/>
                                             <constraint firstAttribute="width" secondItem="cMO-2M-0NZ" secondAttribute="height" multiplier="187:15" id="x1H-MT-8Zj"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="회원 가입">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -287,6 +290,7 @@
                                             <constraint firstAttribute="width" secondItem="4Ro-hP-rpa" secondAttribute="height" multiplier="187:15" id="5Ja-qS-pv0"/>
                                             <constraint firstAttribute="width" constant="374" id="93m-hE-Krs"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="취소">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -301,7 +305,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.65490196079999996" green="0.5568627451" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.52549019610000003" green="0.40784313729999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QWj-HR-jBa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I3A-N8-GW0" secondAttribute="top" constant="206" id="7Lt-Ta-B9e"/>
                             <constraint firstItem="I3A-N8-GW0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QWj-HR-jBa" secondAttribute="bottom" constant="512" id="880-TC-vgN"/>
@@ -335,7 +339,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2R5-Qk-0rO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.65490196078431373" green="0.55686274509803924" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.52549019607843139" green="0.40784313725490196" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         </textAttributes>
@@ -347,7 +351,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAo-4u-DLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.7391304347827" y="797.54464285714278"/>
+            <point key="canvasLocation" x="1822" y="798"/>
         </scene>
         <!--즐겨찾기-->
         <scene sceneID="YXs-T7-9VV">
@@ -362,25 +366,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="즐겨찾기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E53-aq-Q2o">
-                                        <rect key="frame" x="172" y="50" width="70" height="24"/>
+                                        <rect key="frame" x="172" y="53" width="70" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.65490196079999996" green="0.5568627451" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.52549019610000003" green="0.40784313729999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thu-If-75e">
-                                <rect key="frame" x="0.0" y="105" width="440" height="733"/>
+                                <rect key="frame" x="0.0" y="105" width="414" height="733"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FavoriteViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteViewCell" id="779-En-YDU" customClass="FavoriteViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="440" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="779-En-YDU" id="DMs-yq-Guu">
-                                            <rect key="frame" x="0.0" y="0.0" width="440" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -398,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eno-ui-SAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="73"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="72.991071428571431"/>
         </scene>
         <!--커뮤니티-->
         <scene sceneID="nqk-Xg-SMz">
@@ -463,13 +467,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g45-Pw-FFs">
-                                <rect key="frame" x="20" y="213" width="374" height="580"/>
+                                <rect key="frame" x="20" y="213" width="374" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-Sc-gIJ">
+                                <rect key="frame" x="201" y="780" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qMl-M3-IyO"/>
@@ -485,12 +496,13 @@
                     <connections>
                         <outlet property="btnDone" destination="ibs-Tq-ZOD" id="4ZP-n2-q0U"/>
                         <outlet property="contents" destination="g45-Pw-FFs" id="cMT-Hb-bGR"/>
+                        <outlet property="contentsTime" destination="GHm-Sc-gIJ" id="P9w-YB-j1m"/>
                         <outlet property="contentsTitle" destination="NH8-LB-3bn" id="d5N-Xa-d7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fw2-pd-GaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4325" y="491"/>
+            <point key="canvasLocation" x="4324.6376811594209" y="490.84821428571428"/>
         </scene>
         <!--Contents View Controller-->
         <scene sceneID="zjJ-az-x2S">
@@ -553,7 +565,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vWZ-Aj-IEj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentsCell" id="vWZ-Aj-IEj" customClass="CommentsTableViewCell" customModule="WhichOneDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vWZ-Aj-IEj" id="PTb-Lr-Omp">
@@ -595,6 +607,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Us-in-o0e"/>
                     <connections>
+                        <outlet property="btnSend" destination="0TD-bB-j57" id="FyC-Pe-9e7"/>
+                        <outlet property="comments" destination="8Oy-hB-VXl" id="0Zt-gZ-UNf"/>
                         <outlet property="commentsList" destination="YIp-Al-WQZ" id="df6-gV-w9N"/>
                         <outlet property="detailCommentsNum" destination="D0O-Zt-jwy" id="Exr-P5-CjK"/>
                         <outlet property="detailContents" destination="aGN-Fu-apm" id="Xjd-Z1-7JI"/>
@@ -606,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9G-D6-FFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4326" y="1175"/>
+            <point key="canvasLocation" x="4324.6376811594209" y="1174.5535714285713"/>
         </scene>
     </scenes>
     <resources>

@@ -13,26 +13,16 @@ class WriteViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var btnDone: UIBarButtonItem!
     @IBOutlet var contentsTitle: UITextField!
     @IBOutlet var contents: UITextView!
+    @IBOutlet var contentsTime: UILabel!
+
     var time: String?
     var nickname: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.black
         placeholerSetting()
-        
-    
-        // Do any additional setup after loading the view.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func placeholerSetting() {
         contents.delegate = self

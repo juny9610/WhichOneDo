@@ -1,20 +1,18 @@
 //
-//  CommunityTableViewCell.swift
+//  CommentsTableViewCell.swift
 //  WhichOneDo
 //
-//  Created by 임성준 on 2020/06/21.
+//  Created by 임성준 on 2020/06/23.
 //  Copyright © 2020 강희선. All rights reserved.
 //
 
 import UIKit
 
-class CommunityTableViewCell: UITableViewCell {
+class CommentsTableViewCell: UITableViewCell {
 
-    @IBOutlet var title: UILabel!
-    @IBOutlet var time: UILabel!
-    @IBOutlet var userID: UILabel!
-    @IBOutlet var likeNum: UILabel!
-    @IBOutlet var commentsNum: UILabel!
+    @IBOutlet var unknown: UILabel!
+    @IBOutlet var comments: UILabel!
+    @IBOutlet var commentsTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

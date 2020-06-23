@@ -8,17 +8,21 @@
 
 import UIKit
 
-class ContentsViewController: UIViewController {
-
+class ContentsViewController: UIViewController/*, UITableViewDelegate, UITableViewDataSource*/ {
+    
     @IBOutlet var detailUserID: UILabel!
     @IBOutlet var detailTitle: UILabel!
     @IBOutlet var detailContents: UITextView!
     @IBOutlet var detailLikeNum: UILabel!
     @IBOutlet var detailCommentsNum: UILabel!
     @IBOutlet var detailTime: UILabel!
-    @IBOutlet var commentsList: UITableView!
+    
+    //@IBOutlet var commentsList: UITableView!
+    @IBOutlet var comments: UITextField!
+    @IBOutlet var btnSend: UIButton!
     
     var receiveCommunity : CommunityModel!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         let formatter = DateFormatter()
@@ -34,19 +38,12 @@ class ContentsViewController: UIViewController {
         detailCommentsNum.text = receiveCommunity.commentsNum
         detailTime.text = receiveCommunity.time
         
-        // Do any additional setup after loading the view.
+        //commentsList.delegate = self
+        //commentsList.dataSource = self
+        
+        //let nibName = UINib(nibName: "comementsCell", bundle: nil)
+        //commentsList.register(nibName, forCellReuseIdentifier: "commentsCell")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func receiveCommunity(_ item: CommunityModel!) {
         receiveCommunity = item

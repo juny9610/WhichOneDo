@@ -11,7 +11,8 @@ import Firebase
 
 class CommunityTableViewController: UITableViewController {
     
-    var communityList:[CommunityModel] = []
+    var communityList : [CommunityModel] = []
+  
     @IBOutlet var communityListTable: UITableView!
     @IBOutlet var btnWrite: UIBarButtonItem!
     
@@ -25,6 +26,7 @@ class CommunityTableViewController: UITableViewController {
         communityListTable.rowHeight = 100
         
         self.btnWrite.image = UIImage(named: "write")
+
         getContents()
     }
     
@@ -32,15 +34,11 @@ class CommunityTableViewController: UITableViewController {
         communityListTable.reloadData()
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return communityList.count
     }
 
@@ -83,5 +81,6 @@ class CommunityTableViewController: UITableViewController {
             }
         })
     }
+
 }
 
