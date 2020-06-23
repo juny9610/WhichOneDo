@@ -26,7 +26,7 @@ class SignupViewController: UIViewController {
         Auth.auth().createUser(withEmail: tfUserEmail.text!, password: tfUserPassword.text!, completion: {(user, err) in
             if user != nil{
                 let uid = user?.user.uid
-                let value = ["userId" : uid, "userName" : self.tfUserName.text!]
+                let value = ["userId" : uid, "userNickName" : self.tfUserName.text!]
                 Database.database().reference().child("users").child(uid!).setValue(value, withCompletionBlock: {(err, ref) in
                     if (err == nil){
                         self.SignUpCancelEvent()
@@ -37,6 +37,7 @@ class SignupViewController: UIViewController {
                         self.present(alert, animated: true, completion: nil)
                     }
                 })
+                Database.database().reference().child("singleUsers").child(uid!).setValue(value)
             }
         })
     }

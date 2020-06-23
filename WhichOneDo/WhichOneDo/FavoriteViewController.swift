@@ -69,8 +69,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
                 let star = UserModel.Stars(JSON: item.value as! [String:Any])
                 self.stars.append(star!)
             }
-
-            print("stars: ", self.stars)
             self.favoriteTable.reloadData()
         })
     }

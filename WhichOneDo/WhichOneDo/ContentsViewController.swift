@@ -22,13 +22,16 @@ class ContentsViewController: UIViewController/*, UITableViewDelegate, UITableVi
     @IBOutlet var btnSend: UIButton!
     
     var receiveCommunity : CommunityModel!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let formatter = DateFormatter()
+        let write_time_string = formatter.string(from: Date())
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        detailTime.text = write_time_string
         self.navigationController?.navigationBar.tintColor = UIColor.black
 
-        detailUserID.text = receiveCommunity.userID
+        detailUserID.text = receiveCommunity.userId
         detailTitle.text = receiveCommunity.title
         detailContents.text = receiveCommunity.contents
         detailLikeNum.text = receiveCommunity.likeNum
@@ -42,7 +45,7 @@ class ContentsViewController: UIViewController/*, UITableViewDelegate, UITableVi
         //commentsList.register(nibName, forCellReuseIdentifier: "commentsCell")
     }
 
-    func receiveCommunity(_ item: CommunityModel) {
+    func receiveCommunity(_ item: CommunityModel!) {
         receiveCommunity = item
     }
     

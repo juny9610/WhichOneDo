@@ -39,7 +39,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         let favoriteViewController = self.tabBarController?.viewControllers![1] as! FavoriteViewController
         favoriteViewController.getStarList1()
         getfilteredList()
-
+        
     }
     func getfilteredList(){
            Database.database().reference().child("cafes").observe(DataEventType.value, with: {
