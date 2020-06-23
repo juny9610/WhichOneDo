@@ -13,6 +13,8 @@ class WriteViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var btnDone: UIBarButtonItem!
     @IBOutlet var contentsTitle: UITextField!
     @IBOutlet var contents: UITextView!
+    @IBOutlet var contentsTime: UILabel!
+    
     
     
     override func viewDidLoad() {
@@ -21,19 +23,13 @@ class WriteViewController: UIViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         placeholerSetting()
-    
-        // Do any additional setup after loading the view.
-    }
-    
-    /*
-    // MARK: - Navigation
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let write_time_string = formatter.string(from: Date())
+        contentsTime.text = write_time_string
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
     
     func placeholerSetting() {
         contents.delegate = self
@@ -54,8 +50,6 @@ class WriteViewController: UIViewController, UITextViewDelegate {
                 textView.textColor = UIColor.lightGray
             }
         }
-    
-    //작성화면을 database로 전달
     
 }
 

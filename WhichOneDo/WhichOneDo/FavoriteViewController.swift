@@ -20,21 +20,16 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         //self.tabBarItem.image = UIImage(named: "favorite_tabbar")
         //self.tabBarItem.selectedImage = UIImage(named: "favorite_tabbar")
         getStarList()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        favoriteTable.rowHeight = 70
     }
 
-    // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return stars.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
