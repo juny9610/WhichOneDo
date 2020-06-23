@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class ContentsViewController: UIViewController {
     
     @IBOutlet var detailUserID: UILabel!
@@ -19,9 +19,12 @@ class ContentsViewController: UIViewController {
     @IBOutlet var commentsList: UITableView!
     @IBOutlet var comments: UITextField!
     @IBOutlet var btnSend: UIButton!
+    @IBOutlet var btnLike: UIButton!
     
     var receiveCommunity : CommunityModel!
- 
+    var like: String?
+    var like2: Int?
+    var communityId: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         let formatter = DateFormatter()
@@ -36,7 +39,8 @@ class ContentsViewController: UIViewController {
         detailLikeNum.text = receiveCommunity.likeNum
         detailCommentsNum.text = receiveCommunity.commentsNum
         detailTime.text = receiveCommunity.time
-        
+        like = receiveCommunity.likeNum
+        like2 = Int(like!)
         //commentsList.delegate = self
         //commentsList.dataSource = self
         
@@ -44,8 +48,15 @@ class ContentsViewController: UIViewController {
         //commentsList.register(nibName, forCellReuseIdentifier: "commentsCell")
     }
 
-    func receiveCommunity(_ item: CommunityModel!) {
+    func receiveCommunity(_ item: CommunityModel!, _ item2: String) {
         receiveCommunity = item
+        communityId = item2
+    }
+    
+    @IBAction func LikeEvent(_ sender: Any) {
+        like2! += 1
+        detailLikeNum.text = String(like2!)
+        Database.database().reference().child("community").child(communityId!).child("likeNum").setValue(String(like2!))
     }
     
 }

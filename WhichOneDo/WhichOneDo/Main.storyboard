@@ -536,6 +536,9 @@
                                 <rect key="frame" x="25" y="560" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="like"/>
+                                <connections>
+                                    <action selector="LikeEvent:" destination="FWC-Kp-Kli" eventType="touchUpInside" id="Uag-Sx-Wtm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYp-oi-gf7">
                                 <rect key="frame" x="103" y="560" width="22" height="22"/>
@@ -607,6 +610,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Us-in-o0e"/>
                     <connections>
+                        <outlet property="btnLike" destination="q05-Lm-12v" id="QCC-MY-w37"/>
                         <outlet property="btnSend" destination="0TD-bB-j57" id="FyC-Pe-9e7"/>
                         <outlet property="comments" destination="8Oy-hB-VXl" id="0Zt-gZ-UNf"/>
                         <outlet property="commentsList" destination="YIp-Al-WQZ" id="df6-gV-w9N"/>

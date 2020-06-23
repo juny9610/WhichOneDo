@@ -12,7 +12,7 @@ import Firebase
 class CommunityTableViewController: UITableViewController {
     
     var communityList : [CommunityModel] = []
-  
+    var communityId: [String] = []
     @IBOutlet var communityListTable: UITableView!
     @IBOutlet var btnWrite: UIBarButtonItem!
     
@@ -26,7 +26,6 @@ class CommunityTableViewController: UITableViewController {
         communityListTable.rowHeight = 100
         
         self.btnWrite.image = UIImage(named: "write")
-
         getContents()
     }
     
@@ -57,7 +56,7 @@ class CommunityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let contentsview = storyboard?.instantiateViewController(identifier: "ContentsViewController") as? ContentsViewController
-        contentsview?.receiveCommunity(communityList[indexPath.row])
+        contentsview?.receiveCommunity(communityList[indexPath.row], communityId[indexPath.row])
         self.present(contentsview!, animated: true, completion: nil)
     }
     
@@ -69,11 +68,13 @@ class CommunityTableViewController: UITableViewController {
     func getContents(){
         Database.database().reference().child("community").observe(DataEventType.value, with:{ (datasnapshot) in
             self.communityList.removeAll()
+            self.communityId.removeAll()
             for child in datasnapshot.children{
                 let fchild = child as! DataSnapshot
                 let communityModel = CommunityModel()
                 communityModel.setValuesForKeys(fchild.value as! [String:Any])
                 self.communityList.append(communityModel)
+                self.communityId.append(fchild.key)
             }
             DispatchQueue.main.async {
                 self.communityListTable.reloadData()
