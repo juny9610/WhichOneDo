@@ -55,6 +55,8 @@ class WriteViewController: UIViewController, UITextViewDelegate {
             }
         }
     
+    //작성화면을 database로 전달
+    
 }
 
 

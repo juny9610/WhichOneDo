@@ -10,18 +10,18 @@ import UIKit
 
 //Model에 추가하면 될 듯
 struct Community {
-    var boardTitle: String?
     var title: String?
+    var contents: String?
     var time: String?
     var userID: String?
     var likeNum: String?
     var commentsNum: String?
 }
 
-var a = Community(boardTitle: "자유게시판", title: "안녕하세요", time: "12:34", userID: "커피입문자", likeNum: "0", commentsNum: "0")
-var b = Community(boardTitle: "리뷰게시판", title: "할리스커피 한양대점 리뷰", time: "20:47", userID: "카공족대표", likeNum: "4", commentsNum: "2")
-var c = Community(boardTitle: "정보게시판", title: "어떤 원두가 내 취향일까?", time: "04:04", userID: "원두감별사", likeNum: "17", commentsNum: "29")
-var d = Community(boardTitle: "이벤트", title: "스타벅스 여름 이벤트", time: "10:30", userID: "스타벅스 담당자", likeNum: "281", commentsNum: "99")
+var a = Community(title: "안녕하세요", contents: "잘부탁드립니다:)", time: "12:34", userID: "커피입문자", likeNum: "0", commentsNum: "0")
+var b = Community(title: "할리스커피 한양대점 리뷰", contents: "공부하기 좋아요", time: "20:47", userID: "카공족대표", likeNum: "4", commentsNum: "2")
+var c = Community(title: "어떤 원두가 내 취향일까?", contents: "사실 저도 잘 몰라요 헿", time: "04:04", userID: "원두감별사", likeNum: "17", commentsNum: "29")
+var d = Community(title: "스타벅스 여름 이벤트", contents: "세부 내용은 홈페이지를 참고하세요!", time: "10:30", userID: "스타벅스", likeNum: "281", commentsNum: "99")
 
 var communityList : [Community] = [a, b, c, d]
 
@@ -49,6 +49,10 @@ class CommunityTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        communityListTable.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -66,7 +70,6 @@ class CommunityTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "communityCell", for: indexPath) as! CommunityTableViewCell
 
-        cell.boardTitle.text = communityList[indexPath.row].boardTitle
         cell.title.text = communityList[indexPath.row].title
         cell.time.text = communityList[indexPath.row].time
         cell.userID.text = communityList[indexPath.row].userID
@@ -76,6 +79,11 @@ class CommunityTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contentsview = storyboard?.instantiateViewController(identifier: "ContentsViewController") as? ContentsViewController
+        contentsview?.receiveCommunity(communityList[indexPath.row])
+        self.present(contentsview!, animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -128,5 +136,17 @@ class CommunityTableViewController: UITableViewController {
         self.present(view, animated: true, completion: nil)
     }
 
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "sgDetail" {
+//            let cell = sender as! UITableViewCell
+//            let indexPath = self.communityListTable.indexPath(for: cell)
+//            let contentsView = segue.destination as! ContentsViewController
+//            contentsView.receiveCommunity(communityList[((indexPath as NSIndexPath?)?.row)!])
+//
+//        }
+//    }
+    
+    
 }
 
