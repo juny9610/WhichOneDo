@@ -67,7 +67,6 @@ class CommunityTableViewController: UITableViewController {
         self.present(view, animated: true, completion: nil)
     }
     func getContents(){
-        
         Database.database().reference().child("community").observe(DataEventType.value, with:{ (datasnapshot) in
             self.communityList.removeAll()
             for child in datasnapshot.children{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContentsViewController: UIViewController/*, UITableViewDelegate, UITableViewDataSource*/ {
+class ContentsViewController: UIViewController {
     
     @IBOutlet var detailUserID: UILabel!
     @IBOutlet var detailTitle: UILabel!
@@ -16,8 +16,7 @@ class ContentsViewController: UIViewController/*, UITableViewDelegate, UITableVi
     @IBOutlet var detailLikeNum: UILabel!
     @IBOutlet var detailCommentsNum: UILabel!
     @IBOutlet var detailTime: UILabel!
-    
-    //@IBOutlet var commentsList: UITableView!
+    @IBOutlet var commentsList: UITableView!
     @IBOutlet var comments: UITextField!
     @IBOutlet var btnSend: UIButton!
     
