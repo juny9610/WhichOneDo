@@ -19,10 +19,10 @@
 		14682C83249F54B600A83B05 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14682C82249F54B600A83B05 /* ContentsViewController.swift */; };
 		14F5AAD424A225FB00791DB5 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5AAD224A225FB00791DB5 /* CommentsTableViewCell.swift */; };
 		14F5AAD524A225FB00791DB5 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F5AAD324A225FB00791DB5 /* CommentsTableViewCell.xib */; };
-		14F5AAD924A24CA900791DB5 /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5AAD824A24CA900791DB5 /* CommunityModel.swift */; };
 		259234CE2484E15A000F03A6 /* CafeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259234CD2484E15A000F03A6 /* CafeModel.swift */; };
 		2593EDED24A24BC7003FDD31 /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593EDEC24A24BC7003FDD31 /* CommunityModel.swift */; };
 		2593EDEF24A2584C003FDD31 /* SingleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593EDEE24A2584C003FDD31 /* SingleUserModel.swift */; };
+		2593EDF324A27F80003FDD31 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593EDF224A27F80003FDD31 /* CommentModel.swift */; };
 		25A4906B247FC00100254FCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4906A247FC00100254FCB /* LoginViewController.swift */; };
 		25A49071247FC14000254FCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A49070247FC14000254FCB /* GoogleService-Info.plist */; };
 		25A49073247FC1E900254FCB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A49072247FC1E900254FCB /* SignupViewController.swift */; };
@@ -90,10 +90,10 @@
 		14682C82249F54B600A83B05 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
 		14F5AAD224A225FB00791DB5 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		14F5AAD324A225FB00791DB5 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
-		14F5AAD824A24CA900791DB5 /* CommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
 		259234CD2484E15A000F03A6 /* CafeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeModel.swift; sourceTree = "<group>"; };
 		2593EDEC24A24BC7003FDD31 /* CommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
 		2593EDEE24A2584C003FDD31 /* SingleUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserModel.swift; sourceTree = "<group>"; };
+		2593EDF224A27F80003FDD31 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		25A4906A247FC00100254FCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A49070247FC14000254FCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25A49072247FC1E900254FCB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -189,8 +189,16 @@
 				25DE60A22490EDDD001A1AA8 /* StarModel.swift */,
 				2593EDEC24A24BC7003FDD31 /* CommunityModel.swift */,
 				2593EDEE24A2584C003FDD31 /* SingleUserModel.swift */,
+				2593EDF224A27F80003FDD31 /* CommentModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2593EDF124A269C5003FDD31 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		25F06AB22476A3BF005FDD33 = {
@@ -201,6 +209,7 @@
 				25F06ABC2476A3BF005FDD33 /* Products */,
 				88D482FCC9E8FF967C38A1C0 /* Pods */,
 				AB64679550ED6881162718A4 /* Frameworks */,
+				2593EDF124A269C5003FDD31 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,6 +237,7 @@
 				1431B7072484FE5D00F29232 /* FavoriteViewCell.xib */,
 				14682C7B249F299200A83B05 /* CommunityTableViewCell.xib */,
 				14F5AAD324A225FB00791DB5 /* CommentsTableViewCell.xib */,
+				14F5AAD224A225FB00791DB5 /* CommentsTableViewCell.swift */,
 				25A49072247FC1E900254FCB /* SignupViewController.swift */,
 				25A4906A247FC00100254FCB /* LoginViewController.swift */,
 				6E4AA089247FA80A00789257 /* MapViewController.swift */,
@@ -237,7 +247,6 @@
 				14682C78249F27E800A83B05 /* CommunityTableViewController.swift */,
 				14682C7A249F299200A83B05 /* CommunityTableViewCell.swift */,
 				14682C82249F54B600A83B05 /* ContentsViewController.swift */,
-				14F5AAD224A225FB00791DB5 /* CommentsTableViewCell.swift */,
 				14682C80249F398B00A83B05 /* WriteViewController.swift */,
 			);
 			path = WhichOneDo;
@@ -482,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F5AAD924A24CA900791DB5 /* CommunityModel.swift in Sources */,
 				14682C79249F27E800A83B05 /* CommunityTableViewController.swift in Sources */,
 				25A4906B247FC00100254FCB /* LoginViewController.swift in Sources */,
 				259234CE2484E15A000F03A6 /* CafeModel.swift in Sources */,
@@ -500,6 +508,7 @@
 				25DE60A32490EDDD001A1AA8 /* StarModel.swift in Sources */,
 				25DE60A12490B6DE001A1AA8 /* UserModel.swift in Sources */,
 				14682C81249F398B00A83B05 /* WriteViewController.swift in Sources */,
+				2593EDF324A27F80003FDD31 /* CommentModel.swift in Sources */,
 				1431B7082484FE5D00F29232 /* FavoriteViewCell.swift in Sources */,
 				14682C83249F54B600A83B05 /* ContentsViewController.swift in Sources */,
 			);
