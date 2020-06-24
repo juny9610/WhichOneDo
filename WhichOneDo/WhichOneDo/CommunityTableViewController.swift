@@ -56,6 +56,7 @@ class CommunityTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let contentsview = storyboard?.instantiateViewController(identifier: "ContentsViewController") as? ContentsViewController
         contentsview?.receiveCommunity(communityList[indexPath.row], communityId[indexPath.row])
+        contentsview?.modalPresentationStyle = .fullScreen
         self.present(contentsview!, animated: true, completion: nil)
     }
     
