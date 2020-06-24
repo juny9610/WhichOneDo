@@ -25,9 +25,13 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+body, #head {
+	background: linear-gradient(180deg, #86684C, #7E6954, #B7Ac89) fixed;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;}	
 
 body {
 	line-height: 1;
