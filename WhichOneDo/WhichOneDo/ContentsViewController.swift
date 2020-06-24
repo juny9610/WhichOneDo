@@ -19,6 +19,7 @@ class ContentsViewController: UIViewController,UITableViewDelegate, UITableViewD
     @IBOutlet var tfComment: UITextField!
     @IBOutlet var btnSend: UIButton!
     @IBOutlet var btnLike: UIButton!
+    @IBOutlet var btnDone: UIButton!
     
     var receiveCommunity : CommunityModel!
     var like: String?
@@ -100,5 +101,8 @@ class ContentsViewController: UIViewController,UITableViewDelegate, UITableViewD
             }
             self.commentsList.reloadData()
         })
+    }
+    @IBAction func doneEvent(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
