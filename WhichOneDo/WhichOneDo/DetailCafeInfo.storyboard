@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Cafe Info View Controller-->
+        <scene sceneID="1dV-DF-Oxc">
+            <objects>
+                <viewController storyboardIdentifier="DetailCafeInfoViewController" id="Qtx-u4-Yft" customClass="DetailCafeInfoViewController" customModule="WhichOneDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DnX-9z-E9D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="40" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Jxk-A5-bry">
+                                <rect key="frame" x="30" y="74" width="354" height="758"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-KK-At6">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="108.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-rZ-08k">
+                                                <rect key="frame" x="0.0" y="4" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="8zO-1A-UT8"/>
+                                                    <constraint firstAttribute="height" constant="100" id="WuQ-ZG-JbL"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="cafeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-GB-eU3">
+                                                <rect key="frame" x="100" y="42" width="214" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2W-kT-f59">
+                                                <rect key="frame" x="314" y="34" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Xsb-kK-ddL"/>
+                                                    <constraint firstAttribute="height" constant="40" id="dgr-oB-Pmv"/>
+                                                </constraints>
+                                                <state key="normal" image="unFavorite"/>
+                                                <state key="selected" image="Favorite"/>
+                                                <connections>
+                                                    <action selector="favoriteTapped:" destination="Qtx-u4-Yft" eventType="touchUpInside" id="gaG-Vy-7q2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.23529411759999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="bff-db-66V">
+                                        <rect key="frame" x="0.0" y="108.5" width="133" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원두 원산지 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjr-bY-nAG">
+                                                <rect key="frame" x="0.0" y="0.0" width="133" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="coffeeBeanHome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fb-fw-Qay">
+                                                <rect key="frame" x="0.0" y="41.5" width="133" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Nak-2D-zaV">
+                                        <rect key="frame" x="0.0" y="216.5" width="95" height="108.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원두 맛 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISY-7P-O5g">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="coffeeFlavor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ad-wk-JBm">
+                                                <rect key="frame" x="0.0" y="41.5" width="95" height="67"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="XSV-v7-lPN">
+                                        <rect key="frame" x="0.0" y="325" width="145.5" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아메리카노 가격(₩) :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q4-H4-ph6">
+                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="americanoPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpe-zy-WHI">
+                                                <rect key="frame" x="0.0" y="41.5" width="145.5" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="PpV-5C-Pj1">
+                                        <rect key="frame" x="0.0" y="433" width="147" height="108.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영업 시간 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-wd-c8Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="67"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="cafeBusinessHours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UH-4S-hh9">
+                                                <rect key="frame" x="0.0" y="42" width="147" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-E7-nRX">
+                                        <rect key="frame" x="0.0" y="541.5" width="95.5" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가게 주소 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2td-WC-1dP">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="cafeAddress" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0j-5i-nce">
+                                                <rect key="frame" x="0.0" y="41.5" width="95.5" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="nTw-XT-Z9s">
+                                        <rect key="frame" x="0.0" y="649.5" width="81.5" height="108.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호 : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3C-Or-3KM">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="67"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="cafePhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11s-1K-J6t">
+                                                <rect key="frame" x="0.0" y="42" width="81.5" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.23529411759999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.31372549020000001" green="0.23529411759999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rbV-KK-At6" secondAttribute="trailing" id="Gx8-db-kGN"/>
+                                    <constraint firstItem="yBN-E7-nRX" firstAttribute="leading" secondItem="Jxk-A5-bry" secondAttribute="leading" id="M3m-e1-4fe"/>
+                                    <constraint firstItem="rbV-KK-At6" firstAttribute="leading" secondItem="Jxk-A5-bry" secondAttribute="leading" id="rYa-bQ-jRr"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e10-rs-j6g">
+                                <rect key="frame" x="30" y="191.5" width="354" height="0.5"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.23529411759999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="xn9-QP-rs9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaW-mx-Upj">
+                                <rect key="frame" x="30" y="60" width="354" height="0.5"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.23529411759999999" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="h0V-qy-qtz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jxk-A5-bry" firstAttribute="leading" secondItem="don-8r-zfJ" secondAttribute="leading" constant="30" id="7bq-h0-76A"/>
+                            <constraint firstItem="don-8r-zfJ" firstAttribute="bottom" secondItem="Jxk-A5-bry" secondAttribute="bottom" constant="30" id="8pN-h4-GSR"/>
+                            <constraint firstItem="UaW-mx-Upj" firstAttribute="leading" secondItem="e10-rs-j6g" secondAttribute="leading" id="FKk-oC-Mda"/>
+                            <constraint firstItem="UaW-mx-Upj" firstAttribute="top" secondItem="don-8r-zfJ" secondAttribute="top" constant="16" id="JCf-2H-T9c"/>
+                            <constraint firstItem="Jxk-A5-bry" firstAttribute="top" secondItem="don-8r-zfJ" secondAttribute="top" constant="30" id="ONI-pP-vKc"/>
+                            <constraint firstItem="UaW-mx-Upj" firstAttribute="trailing" secondItem="e10-rs-j6g" secondAttribute="trailing" id="XAj-JH-h0B"/>
+                            <constraint firstItem="e10-rs-j6g" firstAttribute="leading" secondItem="DnX-9z-E9D" secondAttribute="leadingMargin" constant="10" id="dKv-SM-dAl"/>
+                            <constraint firstItem="don-8r-zfJ" firstAttribute="bottom" secondItem="e10-rs-j6g" secondAttribute="bottom" constant="670" id="o01-Nf-kTf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e10-rs-j6g" secondAttribute="trailing" constant="10" id="p9N-Qi-kcs"/>
+                            <constraint firstAttribute="trailing" secondItem="Jxk-A5-bry" secondAttribute="trailing" constant="30" id="sUd-3T-mzq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="don-8r-zfJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vyf-vB-c41"/>
+                    <connections>
+                        <outlet property="americanoPrice" destination="Mpe-zy-WHI" id="Ycg-ZI-oaM"/>
+                        <outlet property="btnStar" destination="A2W-kT-f59" id="9TA-0w-NV4"/>
+                        <outlet property="cafeAddress" destination="W0j-5i-nce" id="E2I-bh-wnH"/>
+                        <outlet property="cafeBusinessHours" destination="2UH-4S-hh9" id="AYn-8y-HCF"/>
+                        <outlet property="cafeImage" destination="nBf-rZ-08k" id="veD-pA-sq6"/>
+                        <outlet property="cafeName" destination="L1r-GB-eU3" id="enf-wA-kpK"/>
+                        <outlet property="cafePhone" destination="11s-1K-J6t" id="G6L-eU-37P"/>
+                        <outlet property="coffeeBeanHome" destination="9Fb-fw-Qay" id="vRr-dy-Z2z"/>
+                        <outlet property="coffeeFlavor" destination="9ad-wk-JBm" id="JvW-w5-4PG"/>
+                        <outlet property="txtAmericanoPrice" destination="4q4-H4-ph6" id="raJ-uR-M2m"/>
+                        <outlet property="txtCafeAddress" destination="2td-WC-1dP" id="GjO-p9-yRv"/>
+                        <outlet property="txtCafeBusinessHours" destination="Zbb-wd-c8Q" id="yxc-6S-4kc"/>
+                        <outlet property="txtCafePhone" destination="F3C-Or-3KM" id="lez-BI-LVq"/>
+                        <outlet property="txtCoffeeBeanHome" destination="rjr-bY-nAG" id="6v4-wD-oDq"/>
+                        <outlet property="txtCoffeeFlavor" destination="ISY-7P-O5g" id="Iyx-b4-e9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xs-i7-sCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="88"/>
+        </scene>
+        <!--MapViewController-->
+        <scene sceneID="XcR-b4-fHY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MapViewController" storyboardName="Main" referencedIdentifier="MapViewController" id="23b-ED-iod" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gbZ-1J-5qC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRx-p3-3WH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="-410"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZfJ-qu-YPK">
+            <objects>
+                <navigationController id="M7K-JB-Lp7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qHM-cF-kVT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="23b-ED-iod" kind="relationship" relationship="rootViewController" id="JQ8-5g-Iot"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTy-Vz-PrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1216" y="-150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Favorite" width="256" height="256"/>
+        <image name="cafe" width="512" height="512"/>
+        <image name="unFavorite" width="256" height="256"/>
+    </resources>
+</document>
