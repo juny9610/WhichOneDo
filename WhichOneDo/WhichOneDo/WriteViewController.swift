@@ -22,6 +22,10 @@ class WriteViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.black
         placeholerSetting()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let write_time_string = formatter.string(from: Date())
+        contentsTime.text = write_time_string
     }
     
     func placeholerSetting() {
